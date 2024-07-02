@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- resourcepickerplugin.cpp -->
+  <title>AlgResourcePicker QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#usages">Usages</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgResourcePicker QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgResourcePicker-brief -->
+<p>Allows to display the Substance 3D Painter resource picker. <a href="#details">More...</a></p>
+<!-- @@@AlgResourcePicker -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-algresourcepicker-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algresourcepicker.html#filters-prop" translate="no">filters</a></b></b> : int</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algresourcepicker.html#refineQuery-prop" translate="no">refineQuery</a></b></b> : string</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algresourcepicker.html#resourceSelected-signal" translate="no">resourceSelected</a></b></b>(string <i>name</i>, string <i>previewID</i>)</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn" translate="no">bool <b><b><a href="qml-algwidgets-algresourcepicker.html#requestResourceFromUrl-method" translate="no">requestResourceFromUrl</a></b></b>(string <i>url</i>)</li>
+<li class="fn" translate="no">void <b><b><a href="qml-algwidgets-algresourcepicker.html#show-method" translate="no">show</a></b></b>(point <i>position</i>)</li>
+</ul>
+<!-- $$$AlgResourcePicker-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>Allows to display the Substance 3D Painter resource picker. This class is part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<a name="usages"></a>
+<h2 id="usages">Usages</h2>
+<p>The resource picker is able to filter resources by usages using the following flags:</p>
+<ul>
+<li>AlgResourcePicker.EMITTER</li>
+<li>AlgResourcePicker.ENVIRONMENT</li>
+<li>AlgResourcePicker.LUT</li>
+<li>AlgResourcePicker.FILTER</li>
+<li>AlgResourcePicker.GENERATOR</li>
+<li>AlgResourcePicker.MASK</li>
+<li>AlgResourcePicker.MATERIAL</li>
+<li>AlgResourcePicker.PRESET_BRUSH</li>
+<li>AlgResourcePicker.PRESET_LAYERS</li>
+<li>AlgResourcePicker.PRESET_MASK</li>
+<li>AlgResourcePicker.PRESET_MATERIAL</li>
+<li>AlgResourcePicker.PRESET_PARTICLE</li>
+<li>AlgResourcePicker.PRESET_TOOL</li>
+<li>AlgResourcePicker.PROCEDURAL</li>
+<li>AlgResourcePicker.RECEIVER</li>
+<li>AlgResourcePicker.SHADER</li>
+<li>AlgResourcePicker.TEXTURE</li>
+</ul>
+<!-- @@@AlgResourcePicker -->
+<h2>Property Documentation</h2>
+<!-- $$$filters -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="filters-prop">
+<td class="tblQmlPropNode"><p>
+<a name="filters-prop"></a><span class="name">filters</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-int.html" translate="no">int</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>An integer containing the resource picker flags that must filter the content of the popup.</p>
+<p>By default, <i translate="no">filters</i> is fixed to <b><a href="qml-algwidgets-algresourcepicker.html" translate="no">AlgResourcePicker</a>.MATERIAL</b></p>
+<p><b>See also </b><a href="qml-algwidgets-algresourcepicker.html#usages" translate="no">Usages</a>.</p>
+</div></div><!-- @@@filters -->
+<br/>
+<!-- $$$refineQuery -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="refineQuery-prop">
+<td class="tblQmlPropNode"><p>
+<a name="refineQuery-prop"></a><span class="name">refineQuery</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-string.html" translate="no">string</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>This property holds the popup search bar query.</p>
+<p>By default, <i translate="no">refineQuery</i> is empty.</p>
+</div></div><!-- @@@refineQuery -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$resourceSelected[overload1]$$$resourceSelectedstringstring -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="resourceSelected-signal">
+<td class="tblQmlFuncNode"><p>
+<a name="resourceSelected-signal"></a><span class="name">resourceSelected</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qml-string.html" translate="no">string</a></span> <i>name</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qml-string.html" translate="no">string</a></span> <i>previewID</i>)</p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Signal emitted when a new resource has been selected.</p>
+<p><b>Note: </b>The corresponding handler is <code translate="no">onResourceSelected</code>.</p>
+</div></div><!-- @@@resourceSelected -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$requestResourceFromUrl[overload1]$$$requestResourceFromUrlstring -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="requestResourceFromUrl-method">
+<td class="tblQmlFuncNode"><p>
+<a name="requestResourceFromUrl-method"></a><span class="type"><a href="http://doc.qt.io/qt-5/qml-bool.html" translate="no">bool</a></span> <span class="name">requestResourceFromUrl</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qml-string.html" translate="no">string</a></span> <i>url</i>)</p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Requests a new resource from an url. If the url is not valid, the previous one is kept. Returns true if the url is valid.</p>
+</div></div><!-- @@@requestResourceFromUrl -->
+<br/>
+<!-- $$$show[overload1]$$$showpoint -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="show-method">
+<td class="tblQmlFuncNode"><p>
+<a name="show-method"></a><span class="type">void</span> <span class="name">show</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qml-point.html" translate="no">point</a></span> <i>position</i>)</p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Requests the Substance 3D Painter resource picker display at the screen <i translate="no">position</i>.</p>
+</div></div><!-- @@@show -->
+<br/>
+</body>
+</html>

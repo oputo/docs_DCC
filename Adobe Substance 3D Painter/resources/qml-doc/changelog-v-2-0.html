@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- v2-0.qdoc -->
+  <title>Changelog v2.0 | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#compatibility">Compatibility</a></li>
+<li class="level1"><a href="#algwidgets-style">AlgWidgets style</a></li>
+<li class="level1"><a href="#new-types">New types</a></li>
+<li class="level1"><a href="#removed-types">Removed types</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Changelog v2.0</h1>
+<span class="subtitle"></span>
+<!-- $$$changelog-v-2-0.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="compatibility"></a>
+<h2 id="compatibility">Compatibility</h2>
+<p><a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> 2.0 module is almost fully compatible with <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> 1.0&#x2e;</p>
+<p>Only one type has been removed, the other types are fully compatible. (see <a href="changelog-v-2-0.html#removed-types" translate="no">Removed types</a>)</p>
+<p>Some types have been added. (see <a href="changelog-v-2-0.html#new-types" translate="no">New types</a>)</p>
+<a name="algwidgets-style"></a>
+<h2 id="algwidgets-style">AlgWidgets style</h2>
+<p>All graphic items from <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module have been updated to match the Substance Painter 2018.1&#x2e;x style.</p>
+<a name="new-types"></a>
+<h2 id="new-types">New types</h2>
+<p>New types have been added to the module:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >New type</th><th >Brief description</th></tr></thead>
+<tr valign="top" class="odd"><td ><a href="qml-algwidgets-algtoolbarbutton.html" translate="no">AlgToolBarButton</a></td><td >This new type can be used to easily create a button in the same style as Substance Painter toolbar buttons. It greatly simplifies the usage of <i translate="no">alg.ui.addWidgetToPluginToolBar</i> or <i translate="no">alg.ui.addToolBarWidget</i>.</td></tr>
+<tr valign="top" class="even"><td ><a href="qml-algwidgets-algtooltiparea.html" translate="no">AlgToolTipArea</a></td><td >This new type can be used to add a mouse area that handle tooltips in a custom graphic item.</td></tr>
+<tr valign="top" class="odd"><td ><i translate="no">AlgWidgets.Style</i></td><td >This internal module has been entirely reworked and is no more compatible with its first version. We don't recommend to use this module if users want to keep compatibility with older versions.</td></tr>
+</table></div>
+<a name="removed-types"></a>
+<h2 id="removed-types">Removed types</h2>
+<p>AlgDefaultSlider has been removed from <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+</div>
+<!-- @@@changelog-v-2-0.html -->
+</body>
+</html>

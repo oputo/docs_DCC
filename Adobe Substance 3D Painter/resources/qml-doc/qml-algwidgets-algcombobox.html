@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- AlgComboBox.qml -->
+  <title>AlgComboBox QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgComboBox QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgComboBox-brief -->
+<p>A combo box with Substance 3D Painter style. <a href="#details">More...</a></p>
+<!-- @@@AlgComboBox -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html" translate="no">ComboBox</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-algcombobox-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algcombobox.html#tooltip-prop" translate="no">tooltip</a></b></b> : string</li>
+</ul>
+<!-- $$$AlgComboBox-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>A combo box with Substance 3D Painter style. This class is part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<pre class="qml" translate="no">import AlgWidgets 2.0
+
+<span class="type"><a href="qml-algwidgets-algcombobox.html" translate="no">AlgComboBox</a></span> {
+  <span class="name">id</span>: <span class="name">root</span>
+  <span class="name">model</span>: [{text:<span class="string">&quot;Alg&quot;</span>, value:<span class="number">4</span>}, {text:<span class="string">&quot;Combo&quot;</span>, value:<span class="number">5</span>}, {text:<span class="string">&quot;Box&quot;</span>, value:<span class="number">6</span>}]
+  <span class="name">textRole</span>: <span class="string">&quot;text&quot;</span>
+  <span class="name">onActivated</span>: {
+    <span class="name">alg</span>.<span class="name">log</span>.<span class="name">warn</span>(<span class="string">&quot;Value for '&quot;</span> <span class="operator">+</span> <span class="name">model</span>[<span class="name">index</span>].<span class="name">text</span> <span class="operator">+</span> <span class="string">&quot;' is '&quot;</span> <span class="operator">+</span> <span class="name">model</span>[<span class="name">index</span>].<span class="name">value</span> <span class="operator">+</span> <span class="string">&quot;'&quot;</span>)
+  }
+}</pre>
+<!-- @@@AlgComboBox -->
+<h2>Property Documentation</h2>
+<!-- $$$tooltip -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="tooltip-prop">
+<td class="tblQmlPropNode"><p>
+<a name="tooltip-prop"></a><span class="name">tooltip</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-string.html" translate="no">string</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Tooltip text associated with the combobox.</p>
+</div></div><!-- @@@tooltip -->
+<br/>
+</body>
+</html>

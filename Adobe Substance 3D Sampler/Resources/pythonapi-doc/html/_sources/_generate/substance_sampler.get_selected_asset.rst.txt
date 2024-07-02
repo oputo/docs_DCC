@@ -1,0 +1,6 @@
+﻿substance\_sampler.get\_selected\_asset
+=======================================
+
+.. currentmodule:: substance_sampler
+
+.. autofunction:: get_selected_asset

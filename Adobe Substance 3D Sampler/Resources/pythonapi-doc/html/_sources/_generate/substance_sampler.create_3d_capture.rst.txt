@@ -1,0 +1,6 @@
+﻿substance\_sampler.create\_3d\_capture
+======================================
+
+.. currentmodule:: substance_sampler
+
+.. autofunction:: create_3d_capture

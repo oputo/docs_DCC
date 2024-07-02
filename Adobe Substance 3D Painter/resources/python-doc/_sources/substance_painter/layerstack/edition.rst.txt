@@ -1,0 +1,74 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2010-2020 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+Layerstack edition
+==================
+
+The :doc:`index` allows the insertion and deletion of layers and effects.
+
+Example
+-------
+
+.. literalinclude:: snippets/edition.py
+   :language: python
+
+.. _layerstack_edition_insertion:
+
+Insertion
+---------
+
+Insertion of a layer or an effect can be done by using one of the following functions.
+For more details, see :doc:`layereffect/index`.
+
+- :func:`substance_painter.layerstack.insert_paint`
+- :func:`substance_painter.layerstack.insert_fill`
+- :func:`substance_painter.layerstack.insert_generator_effect`
+- :func:`substance_painter.layerstack.insert_filter_effect`
+- :func:`substance_painter.layerstack.insert_levels_effect`
+- :func:`substance_painter.layerstack.insert_compare_mask_effect`
+- :func:`substance_painter.layerstack.insert_color_selection_effect`
+- :func:`substance_painter.layerstack.insert_group`
+- :func:`substance_painter.layerstack.instantiate`
+- :func:`substance_painter.layerstack.insert_anchor_point_effect`
+- :func:`substance_painter.layerstack.insert_smart_mask`
+- :func:`substance_painter.layerstack.insert_smart_material`
+
+.. autoclass:: substance_painter.layerstack.InsertPosition
+   :members:
+   :member-order: bysource
+
+.. csv-table:: Insertion rules when node is a LayerNode
+   :file: insertion_rules_layer.csv
+   :header-rows: 1
+   :align: center
+   :name: insertion_rules_layer
+
+.. csv-table:: Insertion rules when node is an EffectNode
+   :file: insertion_rules_effect.csv
+   :header-rows: 1
+   :align: center
+   :name: insertion_rules_effect
+
+.. autoclass:: substance_painter.layerstack.ScopedModification
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.NodeStack
+   :members:
+   :member-order: bysource
+
+Deletion
+--------
+
+.. autofunction:: substance_painter.layerstack.delete_node

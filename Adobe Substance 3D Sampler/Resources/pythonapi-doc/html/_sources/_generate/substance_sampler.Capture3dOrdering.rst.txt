@@ -1,0 +1,6 @@
+﻿substance\_sampler.Capture3dOrdering
+====================================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: Capture3dOrdering

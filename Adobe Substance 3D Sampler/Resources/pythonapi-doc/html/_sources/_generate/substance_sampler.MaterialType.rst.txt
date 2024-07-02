@@ -1,0 +1,7 @@
+﻿substance\_sampler.MaterialType
+===============================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: MaterialType
+

@@ -1,0 +1,6 @@
+﻿substance\_sampler.MaterialExportFormat
+===============================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: MaterialExportFormat

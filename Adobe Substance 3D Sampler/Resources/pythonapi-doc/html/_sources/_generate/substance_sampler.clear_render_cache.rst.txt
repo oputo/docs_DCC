@@ -1,0 +1,6 @@
+﻿substance\_sampler.clear\_render\_cache
+=======================================
+
+.. currentmodule:: substance_sampler
+
+.. autofunction:: clear_render_cache

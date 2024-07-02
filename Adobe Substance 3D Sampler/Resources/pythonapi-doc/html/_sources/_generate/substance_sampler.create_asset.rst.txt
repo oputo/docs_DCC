@@ -1,0 +1,6 @@
+﻿substance\_sampler.create\_asset
+================================
+
+.. currentmodule:: substance_sampler
+
+.. autofunction:: create_asset

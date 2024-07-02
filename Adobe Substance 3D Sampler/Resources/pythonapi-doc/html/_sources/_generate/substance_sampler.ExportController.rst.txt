@@ -1,0 +1,28 @@
+﻿substance\_sampler.ExportController
+===================================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: ExportController
+   :members:
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ExportController.__init__
+      ~ExportController.cancel
+      ~ExportController.on_canceled
+      ~ExportController.on_failed
+      ~ExportController.on_finished
+      ~ExportController.wait
+      ~ExportController.wait_for
+   
+   
+
+   
+   
+   

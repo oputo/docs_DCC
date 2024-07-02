@@ -1,0 +1,6 @@
+﻿substance\_sampler.Widget
+=========================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: Widget

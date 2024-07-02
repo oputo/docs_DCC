@@ -1,0 +1,37 @@
+﻿substance\_sampler.Usage
+========================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: Usage
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Usage.__init__
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Usage.id
+      ~Usage.label
+   
+   Example:
+
+   .. code-block:: python
+
+      import substance_sampler
+
+      my_asset = substance_sampler.create_asset(name="USAGE", type=substance_sampler.AssetType.material, select_asset=True)
+      image_layer = my_asset.import_images([image_path], 0, substance_sampler.ImageImportOption.use_as_bitmap)
+      substance_sampler.wait_for_computation()
+      output_usage_parameter = [parameter for parameter in image_layer.parameters if parameter.label == "Output usage"][0]
+      output_usage_parameter.value = substance_sampler.Usage("Base Color")
+      print(substance_sampler.Usage(output_usage_parameter.value).label)
+   

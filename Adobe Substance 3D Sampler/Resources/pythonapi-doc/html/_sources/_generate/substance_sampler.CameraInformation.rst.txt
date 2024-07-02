@@ -1,0 +1,28 @@
+﻿substance\_sampler.CameraInformation
+====================================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: CameraInformation
+
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CameraInformation.aligned
+      ~CameraInformation.camera_brand
+      ~CameraInformation.camera_model
+      ~CameraInformation.center
+      ~CameraInformation.far_depth
+      ~CameraInformation.focal_length
+      ~CameraInformation.focal_length_35mm_eq
+      ~CameraInformation.focal_length_pixels
+      ~CameraInformation.lens_model
+      ~CameraInformation.median_depth
+      ~CameraInformation.near_depth
+      ~CameraInformation.rotation
+      ~CameraInformation.sensor_size
+      ~CameraInformation.principal_point
+      ~CameraInformation.distortion
+   
+   

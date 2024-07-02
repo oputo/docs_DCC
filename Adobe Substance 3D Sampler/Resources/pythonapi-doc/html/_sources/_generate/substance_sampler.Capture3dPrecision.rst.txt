@@ -1,0 +1,8 @@
+﻿substance\_sampler.Capture3dPrecision
+=====================================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: Capture3dPrecision
+
+   

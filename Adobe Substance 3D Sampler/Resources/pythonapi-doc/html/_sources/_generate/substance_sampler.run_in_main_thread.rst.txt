@@ -1,0 +1,6 @@
+﻿substance\_sampler.run\_in\_main\_thread
+========================================
+
+.. currentmodule:: substance_sampler
+
+.. autofunction:: run_in_main_thread

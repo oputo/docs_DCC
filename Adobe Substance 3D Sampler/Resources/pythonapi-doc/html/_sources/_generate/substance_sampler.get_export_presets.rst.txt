@@ -1,0 +1,6 @@
+﻿substance\_sampler.get\_export\_presets
+=======================================
+
+.. currentmodule:: substance_sampler
+
+.. autofunction:: get_export_presets

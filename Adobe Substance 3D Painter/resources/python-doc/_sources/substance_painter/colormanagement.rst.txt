@@ -1,0 +1,50 @@
+colormanagement module
+=======================
+
+Allows to manipulate colors and resources with color management.
+
+This module exposes the :class:`~substance_painter.colormanagement.Color` class which allows to express color with proper color management. This :class:`~substance_painter.colormanagement.Color` object is used by the different interfaces of the layerstack API such as :doc:`Fills <layerstack/layereffect/fill>` and :doc:`Uniform sources <source/uniformcolor>`.
+
+.. seealso::
+   `Colormanagement documentation`_.
+
+.. _Colormanagement documentation:
+   https://helpx.adobe.com/substance-3d-painter/features/color-management.html
+
+.. literalinclude:: snippets/colormanagement.py
+   :caption: Example
+   :language: python
+
+.. autoclass:: substance_painter.colormanagement.Color
+   :members:
+   :member-order: bysource
+
+.. _colormanagement_colorspaces:
+
+ColorSpace Enums
+-----------------
+
+Following enums describe the different predefined colorspaces supported by Substance Painter.
+
+Also note that on top of these enums, if you are using OCIO or ACE colormanagement engine in your project, you can also specify plain `strings` with the name of colorspaces available in your configuration.
+
+:class:`~substance_painter.source.GenericColorSpace` and plain `strings` can be used to describe how r,g,b data are encoded in :class:`~substance_painter.colormanagement.Color` or when calling the :func:`~substance_painter.colormanagement.Color.convert` function to specify in which colorspace you want the data converted to.
+
+All these enums and plain `strings` can be used to access or override :class:`~substance_painter.source.SourceBitmap` color spaces.
+
+
+.. autoclass:: substance_painter.colormanagement.GenericColorSpace
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.colormanagement.LegacyColorSpace
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.colormanagement.DataColorSpace
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.colormanagement.NormalColorSpace
+   :members:
+   :member-order: bysource

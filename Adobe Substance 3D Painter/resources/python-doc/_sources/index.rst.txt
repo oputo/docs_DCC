@@ -1,0 +1,46 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2010-2020 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+.. Substance 3D Painter Python API Documentation documentation main file, created by
+   sphinx-quickstart on Mon Feb  3 14:22:14 2020.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Substance 3D Painter Python API |version| Documentation
+=======================================================
+
+The Python API provides access to Substance 3D Painter functionalities via Python
+scripts for Substance 3D Painter. This documentation contains the detailed API as
+well as examples and samples.
+
+This documentation is about a scripting API; follow this link for the
+`Substance 3D Painter documentation
+<https://www.adobe.com/go/Substance-3D-doc-Painter>`_.
+
+
+Overview
+--------
+
+.. toctree::
+   :maxdepth: 2
+
+   Home <self>
+   plugins/index
+   substance_painter/index
+
+* :ref:`genindex`
+* :ref:`modindex`
+
+
+.. include:: changelog.rst

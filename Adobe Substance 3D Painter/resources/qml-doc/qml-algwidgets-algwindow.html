@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- AlgWindow.qml -->
+  <title>AlgWindow QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgWindow QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgWindow-brief -->
+<p>A window with Substance 3D Painter style. <a href="#details">More...</a></p>
+<!-- @@@AlgWindow -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-window-window.html" translate="no">Window</a></p>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qml-algwidgets-algdialog.html" translate="no">AlgDialog</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-algwindow-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algwindow.html#screenCentered-prop" translate="no">screenCentered</a></b></b> : bool</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algwindow.html#close-method" translate="no">close</a></b></b>()</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algwindow.html#open-method" translate="no">open</a></b></b>()</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algwindow.html#reload-method" translate="no">reload</a></b></b>()</li>
+</ul>
+<!-- $$$AlgWindow-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>A window with Substance 3D Painter style. This class is part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<p>This window allows users to press <i translate="no">escape</i> to be closed.</p>
+<pre class="qml" translate="no">import AlgWidgets 2.0
+
+<span class="type"><a href="qml-algwidgets-algwindow.html" translate="no">AlgWindow</a></span> {
+  <span class="name">id</span>: <span class="name">root</span>
+  <span class="name">title</span>: <span class="string">&quot;AlgWindow&quot;</span>
+  <span class="name">visible</span>: <span class="number">true</span>
+}</pre>
+<!-- @@@AlgWindow -->
+<h2>Property Documentation</h2>
+<!-- $$$screenCentered -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="screenCentered-prop">
+<td class="tblQmlPropNode"><p>
+<a name="screenCentered-prop"></a><span class="name">screenCentered</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-bool.html" translate="no">bool</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Determines if the window must be created at the center of the screen. If set to false, the behavior is undefined.</p>
+<p>By default, <i translate="no">screenCentered</i> is set to true.</p>
+</div></div><!-- @@@screenCentered -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$close[overload1]$$$close -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="close-method">
+<td class="tblQmlFuncNode"><p>
+<a name="close-method"></a><span class="name">close</span>()</p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Close the window.</p>
+</div></div><!-- @@@close -->
+<br/>
+<!-- $$$open[overload1]$$$open -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="open-method">
+<td class="tblQmlFuncNode"><p>
+<a name="open-method"></a><span class="name">open</span>()</p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Reload the content and show the window.</p>
+</div></div><!-- @@@open -->
+<br/>
+<!-- $$$reload[overload1]$$$reload -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="reload-method">
+<td class="tblQmlFuncNode"><p>
+<a name="reload-method"></a><span class="name">reload</span>()</p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Reload the content of the window, must be overriden.</p>
+</div></div><!-- @@@reload -->
+<br/>
+</body>
+</html>

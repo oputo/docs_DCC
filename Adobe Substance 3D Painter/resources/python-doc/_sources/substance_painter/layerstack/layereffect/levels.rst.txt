@@ -1,0 +1,50 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2010-2020 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+Levels effect
+====================
+
+:class:`~substance_painter.layerstack.LevelsEffectNode` is an effect used to adjust the color ranges of an image. It allows to balance and tone colors and/or graycales values.
+
+.. seealso::
+   `Levels effect documentation`_.
+
+.. _Levels effect documentation:
+   https://helpx.adobe.com/substance-3d-painter/features/effects/levels.html
+
+.. literalinclude:: ../snippets/levels.py
+   :language: python
+   :caption: Example
+
+.. autofunction:: substance_painter.layerstack.insert_levels_effect
+
+.. autoclass:: substance_painter.layerstack.LevelsEffectNode
+   :members:
+   :member-order: bysource
+   :show-inheritance:
+
+Params
+------
+
+.. autoclass:: substance_painter.levels.LevelsParamsRGB
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.levels.LevelsParamsMono
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.levels.LevelsParams
+   :members:
+   :member-order: bysource

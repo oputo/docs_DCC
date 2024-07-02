@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- AlgSpinBoxes.qml -->
+  <title>AlgSpinBoxes QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgSpinBoxes QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgSpinBoxes-brief -->
+<p>A multi-dimensional spinbox to edit vectors value with Substance 3D Painter style. <a href="#details">More...</a></p>
+<!-- @@@AlgSpinBoxes -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html" translate="no">Item</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-algspinboxes-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algspinboxes.html#dimensions-prop" translate="no">dimensions</a></b></b> : int</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algspinboxes.html#maxValue-prop" translate="no">maxValue</a></b></b> : var</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algspinboxes.html#minValue-prop" translate="no">minValue</a></b></b> : var</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algspinboxes.html#precision-prop" translate="no">precision</a></b></b> : int</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algspinboxes.html#singleStep-prop" translate="no">singleStep</a></b></b> : real</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algspinboxes.html#value-prop" translate="no">value</a></b></b> : var</li>
+</ul>
+<!-- $$$AlgSpinBoxes-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>A group of several <a href="qml-algwidgets-algspinbox.html" translate="no">spinboxes</a> to edit vectors value with Substance 3D Painter style. This class is part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<pre class="qml" translate="no">import AlgWidgets 2.0
+
+<span class="type"><a href="qml-algwidgets-algspinboxes.html" translate="no">AlgSpinBoxes</a></span> {
+  <span class="name">id</span>: <span class="name">root</span>
+  <span class="name">dimensions</span>: <span class="number">4</span>
+  <span class="name">value</span>: [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]
+  <span class="name">minValue</span>: [-<span class="number">1</span>,-<span class="number">1</span>,-<span class="number">1</span>,-<span class="number">1</span>]
+  <span class="name">maxValue</span>: [<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>]
+}</pre>
+<!-- @@@AlgSpinBoxes -->
+<h2>Property Documentation</h2>
+<!-- $$$dimensions -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="dimensions-prop">
+<td class="tblQmlPropNode"><p>
+<a name="dimensions-prop"></a><span class="name">dimensions</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-int.html" translate="no">int</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>The number of spinbox that the group must contain.</p>
+<p>By default, <i translate="no">dimensions</i> is set to 1.</p>
+</div></div><!-- @@@dimensions -->
+<br/>
+<!-- $$$maxValue -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="maxValue-prop">
+<td class="tblQmlPropNode"><p>
+<a name="maxValue-prop"></a><span class="name">maxValue</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html" translate="no">var</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>The maximum values of each spinbox of the group in a <a href="qml-algwidgets-algspinboxes.html#dimensions-prop" translate="no">dimensions</a> sized array.</p>
+<p>The size of the array may be different than the <a href="qml-algwidgets-algspinboxes.html#dimensions-prop" translate="no">dimensions</a> value. If maxValue.length <b>&lt;</b> dimensions: the default value of the <a href="qml-algwidgets-algspinbox.html" translate="no">AlgSpinBox</a> will be used.</p>
+<p>By default, <i translate="no">maxValue</i> is empty.</p>
+</div></div><!-- @@@maxValue -->
+<br/>
+<!-- $$$minValue -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="minValue-prop">
+<td class="tblQmlPropNode"><p>
+<a name="minValue-prop"></a><span class="name">minValue</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html" translate="no">var</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>The minimum values of each spinbox of the group in a <a href="qml-algwidgets-algspinboxes.html#dimensions-prop" translate="no">dimensions</a> sized array.</p>
+<p>The size of the array may be different than the <a href="qml-algwidgets-algspinboxes.html#dimensions-prop" translate="no">dimensions</a> value. If minValue.length <b>&lt;</b> dimensions: the default value of the <a href="qml-algwidgets-algspinbox.html" translate="no">AlgSpinBox</a> will be used.</p>
+<p>By default, <i translate="no">minValue</i> is empty.</p>
+</div></div><!-- @@@minValue -->
+<br/>
+<!-- $$$precision -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="precision-prop">
+<td class="tblQmlPropNode"><p>
+<a name="precision-prop"></a><span class="name">precision</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-int.html" translate="no">int</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>The precision of each spinbox of the group.</p>
+<p>Every spinbox will have the same precision.</p>
+<p>By default, <i translate="no">precision</i> is set to 3.</p>
+</div></div><!-- @@@precision -->
+<br/>
+<!-- $$$singleStep -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="singleStep-prop">
+<td class="tblQmlPropNode"><p>
+<a name="singleStep-prop"></a><span class="name">singleStep</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-real.html" translate="no">real</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>The step size of each spinbox of the group.</p>
+<p>Every spinbox will have the same step size.</p>
+<p>By default, <i translate="no">singleStep</i> is fixed to 10<sup>-<a href="qml-algwidgets-algspinboxes.html#precision-prop" translate="no">precision</a></sup>.</p>
+</div></div><!-- @@@singleStep -->
+<br/>
+<!-- $$$value -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="value-prop">
+<td class="tblQmlPropNode"><p>
+<a name="value-prop"></a><span class="name">value</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html" translate="no">var</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>The values of each spinbox of the group in a <a href="qml-algwidgets-algspinboxes.html#dimensions-prop" translate="no">dimensions</a> sized array.</p>
+<p>The size of the array may be different than the <a href="qml-algwidgets-algspinboxes.html#dimensions-prop" translate="no">dimensions</a> value. If value.length <b>&lt;</b> dimensions: the default value of the <a href="qml-algwidgets-algspinbox.html" translate="no">AlgSpinBox</a> will be used.</p>
+<p>By default, <i translate="no">value</i> is empty.</p>
+</div></div><!-- @@@value -->
+<br/>
+</body>
+</html>

@@ -1,0 +1,6 @@
+﻿substance\_sampler.EnvironmentLightExportFormat
+===============================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: EnvironmentLightExportFormat

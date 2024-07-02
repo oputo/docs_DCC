@@ -1,0 +1,38 @@
+﻿substance\_sampler.Asset
+========================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: Asset
+   :members:
+
+   .. rubric:: Methods
+
+   .. autosummary::
+
+      ~Asset.export
+      ~Asset.export_material
+      ~Asset.export_environment_light
+      ~Asset.export_mesh
+      ~Asset.export_3d_object
+      ~Asset.get_layers
+      ~Asset.import_images
+      ~Asset.import_textures
+      ~Asset.insert_filter
+      ~Asset.insert_material
+      ~Asset.remove_layer
+      ~Asset.document_resolution
+
+
+
+
+
+   .. rubric:: Attributes
+
+   .. autosummary::
+
+      ~Asset.metadata
+      ~Asset.resource
+      ~Asset.name
+      ~Asset.type
+

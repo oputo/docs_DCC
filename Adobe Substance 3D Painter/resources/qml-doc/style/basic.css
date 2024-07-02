@@ -1,0 +1,331 @@
+#navbar {
+  position:fixed;
+  top:0;
+  left:0;
+  background:#2B3E51;
+  width:100%
+}
+#navbar .navbar-header {
+  position:relative
+}
+#navbar a {
+  display:block;
+  float:left;
+  padding:20px 1em;
+  font-size:1.25em;
+  font-weight:300;
+  line-height:20px;
+  height:20px;
+  color:#fff;
+  box-sizing:border-box;
+  text-decoration:none;
+}
+#navbar a:hover {
+  color:#02BD9C;
+}
+#mainmenu {
+  float:left;
+  list-style:none;
+  margin-left:10px
+}
+#mainmenu li {
+  float:left;
+  margin-left:0;
+  list-style-type:none !important
+}
+#mainmenu li >a {
+  display:block;
+  padding:22px 1em;
+  font-size:1em;
+  font-weight:300;
+  line-height:16px;
+  height:60px;
+  color:#fff;
+  box-sizing:border-box;
+  text-decoration:none;
+}
+#mainmenu li >a:hover {
+  color:#02BD9C;
+}
+/* Dropdown Button */
+#mainmenu li .dropbtn {
+  display:block;
+  padding:22px 1em;
+  font-size:1em;
+  font-weight:400;
+  line-height:16px;
+  height:60px;
+  color:#fff;
+  box-sizing:border-box;
+  border: none;
+  text-decoration:none;
+  background-color:#2B3E51;
+  cursor: pointer;
+}
+/* Dropdown button on hover & focus */
+#mainmenu li .dropbtn:hover {
+  color:#02BD9C;
+}
+#mainmenu li .dropbtn:focus {
+  background-color:#1a242f;
+  color:#fff !important;
+  outline: 0;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    padding: 5px 0px;
+    border-radius: 0px 0px 5px 5px;
+    border:1px solid #7b8a8b;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #7b8a8b !important;
+    padding: 0px 20px !important;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size:0.85em !important;
+    font-weight:300;
+    line-height:16px;
+    height:28px;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #2B3E51;
+  color: #fff !important;
+}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/* define default parameters */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:100%
+}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  vertical-align:baseline
+}
+body {
+  font-family:“Open Sans”, Arial, Helvetica, sans-serif;
+  line-height:1.5;
+  font-weight:400
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight:300
+}
+.context h2,.context h3,.context h4,.context h5,.context h6 {
+  margin:1.5em 0 1em
+}
+/* remove navigation bar */
+.main-rounded >li {
+  display:none;
+  visibility:hidden
+}
+a {
+  color:#02BD9C;
+  text-decoration:none;
+  transition-duration:0.3s
+}
+a:hover {
+  text-decoration:underline;
+}
+/* center */
+.main,.navbar-header,#footerbar>div {
+  max-width:1280px;
+  width:95%;
+  margin:0 auto
+}
+.main {
+  margin-top:70px
+}
+.col-1,.context {
+  width:70%;
+  display:inline-block;
+  background-color:#fff;
+  padding:0px 35px 35px 35px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  box-sizing:border-box
+}
+/* \section1 */
+.col-1 h2 {
+  font-size:2.1875em;
+  font-weight:300;
+  line-height:1.1;
+  margin-bottom:0.83em;
+  margin-top:1em
+}
+div.multi-column {
+  position:relative
+}
+div.multi-column div {
+  display:-moz-inline-box;
+  display:inline-block;
+  vertical-align:top;
+  margin-top:1em;
+  margin-right:2em;
+  width:16em
+}
+/* right menu panel */
+.sidebar {
+  display:block;
+  float:right;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  box-sizing:border-box;
+  width:30%;
+  padding-left:0px;
+  position:fixed;
+  right:15px;
+}
+.toc,.sectionlist {
+  background-color:#fff;
+  border:1px solid #eee;
+  border-radius: 5px;
+}
+.sidebar-content:empty {
+  display:none;
+  visibility:hidden
+}
+.col-2 h2,.toc h3,.sidebar-content h2,.sidebar-content h3,.sectionlist h2 {
+  font-weight:400;
+}
+.toc h3 {
+  padding:0.75em;
+  background-color:#2B3E51;
+  border-radius: 5px 5px 0px 0px
+}
+.toc h3 a {
+  color:#fff;
+}
+.toc h3 a:hover {
+  text-decoration:none;
+}
+.toc ul li a {
+  color: #404244;
+  padding: 0.75em 0em;
+  text-decoration: none;
+  display: inline-block;
+  border-top:1px solid #eee;
+  width: 100%;
+  text-indent:0.75em;
+  /* one line max */
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: bottom;
+  text-overflow: ellipsis;
+}
+.toc ul .level2 a {
+  color: #606264;
+  text-indent:1.75em;
+}
+.toc ul li a:hover {
+  background-color: #eee;
+  text-decoration: none;
+}
+body {
+  background-color:#fff;
+  color:#404244
+}
+/* tables */
+table {
+  border-collapse: collapse;
+  width:100%
+}
+table th, td {
+  min-width: 5%;
+  padding: 3px 10px
+}
+table th {
+  background-color: #fff
+}
+td >p {
+  margin-bottom: 0px
+}
+td >ul {
+  margin-top: 20px;
+}
+ul + p {
+  margin-top: 20px;
+}
+tr:nth-child(odd) {background-color: #f8f8f8}
+.alignedsummary {
+  width:50%
+}
+.qmlproto tr {
+  background-color: #CEE8E3
+}
+/* text properties */
+.title {
+  font-size:2em;
+  font-weight:300;
+  letter-spacing:-1px;
+  line-height:1.15em;
+  margin-bottom:1em;
+  word-wrap:break-word;
+  color:#02BD9C;
+}
+div, p {
+  margin-bottom:20px
+}
+p, li {
+  text-align:justify;
+}
+.context h2 {
+  font-size:1.5em;
+  width:100%;
+  border-bottom:2px solid #eee;
+  padding-left:5px
+}
+.context h3 {
+  font-size:1.15em;
+  width:100%;
+  border-bottom:1px solid #eee;
+  padding-left:5px
+}
+/* lists */
+ul {
+  list-style:none;
+}
+/* code */
+.qml {
+  background-color:#262626;
+  color:#e0e0e0;
+  padding:15px;
+  margin-bottom:20px;
+}
+.qml .string {
+  color:#4ded49;
+}
+.qml .number {
+  color:#f8bb79;
+}
+.qml .name {
+  color:#c27ef7;
+}
+.qml .type {
+  color:#a1cbf9;
+}
+.qml .keyword {
+  color:#e6dc6d;
+}
+.qml .comment {
+  color:#727731;
+}
+/* import, inherits table */
+.memItemRight p, .memItemLeft p {
+  text-align:left;
+}

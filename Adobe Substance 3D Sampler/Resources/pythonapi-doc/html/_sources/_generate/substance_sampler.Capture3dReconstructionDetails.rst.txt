@@ -1,0 +1,9 @@
+﻿substance\_sampler.Capture3dReconstructionDetails
+=================================================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: Capture3dReconstructionDetails
+
+   
+   

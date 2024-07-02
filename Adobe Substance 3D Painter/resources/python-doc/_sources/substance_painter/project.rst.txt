@@ -1,0 +1,266 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2010-2020 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+project module
+==============
+
+.. automodule:: substance_painter.project
+   :members:
+   :exclude-members: ProjectSaveMode, ProjectWorkflow, NormalMapFormat,
+      TangentSpace, Settings, MeshReloadingSettings, UsdSettings, ReloadMeshStatus,
+      create, is_open, open, close, needs_saving, save, save_as, save_as_copy,
+      save_as_template, last_imported_mesh_path, reload_mesh, Metadata
+
+
+Creating a project
+------------------
+
+Example:
+::
+
+    import substance_painter.project
+
+    # Use OpenGL / right handed normal map format:
+    ogl_normal_map_format = substance_painter.project.NormalMapFormat.OpenGL
+
+    # Use per vertex tangent space:
+    per_vertex_tangent = substance_painter.project.TangentSpace.PerVertex
+
+    # Declare the settings for the project:
+    project_settings = substance_painter.project.Settings(
+        import_cameras=True,
+        normal_map_format=ogl_normal_map_format,
+        tangent_space_mode=per_vertex_tangent)
+
+    # A list of maps to use:
+    maps = ["C:/Documents/DefaultMaterial_ambient_occlusion.png",
+        "C:/Documents/DefaultMaterial_id.png"]
+
+    # Create the project with those settings:
+    substance_painter.project.create(
+        mesh_file_path = "C:/Documents/my_mesh.fbx",
+        mesh_map_file_paths = maps,
+        settings = project_settings)
+
+
+    # If this is a project with UDIMs, we need to choose the workflow:
+    uv_tile_workflow = substance_painter.project.ProjectWorkflow.UVTile
+
+    # Declare the settings for the project:
+    project_settings = substance_painter.project.Settings(
+        import_cameras=True,
+        normal_map_format=ogl_normal_map_format,
+        tangent_space_mode=per_vertex_tangent,
+        project_workflow=uv_tile_workflow)
+
+    # A list of maps to use (in this example, the file name indicates a
+    # a sequence of potentially several UDIMs; the project will load all
+    # of them without having to list them individually):
+    maps = ["C:/Documents/DefaultMaterial_ambient_occlusion.1001.png"]
+
+    # Create the project with those settings:
+    substance_painter.project.create(
+        mesh_file_path = "C:/Documents/my_mesh_with_UDIMs.fbx",
+        mesh_map_file_paths = maps,
+        settings = project_settings)
+
+
+.. autofunction:: substance_painter.project.create
+
+.. autoclass:: substance_painter.project.Settings
+   :members:
+
+.. autoclass:: substance_painter.project.UsdSettings
+   :members:
+
+.. autoclass:: substance_painter.project.NormalMapFormat
+   :members:
+
+.. autoclass:: substance_painter.project.TangentSpace
+   :members:
+
+.. autoclass:: substance_painter.project.ProjectWorkflow
+   :members:
+
+
+Opening and closing a project
+-----------------------------
+
+Example:
+::
+
+    import substance_painter.project
+
+    # Check if a project is already opened:
+    if substance_painter.project.is_open():
+        print("A project is already opened!")
+    else:
+        # Open an existing project:
+        substance_painter.project.open("c:/Documents/project.spp")
+
+    if substance_painter.project.is_open():
+        # Close the project currently opened:
+        substance_painter.project.close()
+
+.. autofunction:: substance_painter.project.is_open
+
+.. autofunction:: substance_painter.project.open
+
+.. autofunction:: substance_painter.project.close
+
+
+Saving a project
+----------------
+
+Saving a project is disabled when Substance 3D Painter is busy and will throw
+a :class:`substance_painter.exception.ProjectError`.
+
+Example:
+::
+
+    import substance_painter.project
+
+    # Check if a project is already opened:
+    if not substance_painter.project.is_open():
+        print("No project is opened!")
+
+    # Check if the project needs to be saved at all:
+    if not substance_painter.project.needs_saving():
+        print("There is nothing to save!")
+
+    # Save the project under the name "project1":
+    substance_painter.project.save_as("c:/Documents/project1.spp",
+                                        substance_painter.project.ProjectSaveMode.Full)
+    # This should print "c:/Documents/project1.spp":
+    print(substance_painter.project.file_path())
+
+    # Change the name of the project to "project2":
+    substance_painter.project.save_as("c:/Documents/project2.spp")
+    # This should now print "c:/Documents/project2.spp":
+    print(substance_painter.project.file_path())
+
+    # Create a backup copy of the project:
+    substance_painter.project.save_as_copy("c:/Documents/project2-backup.spp")
+    # This should still print "c:/Documents/project2.spp":
+    print(substance_painter.project.file_path())
+
+    # Save the project incrementally
+    #(writing to project2.spp, and not project2-backup.spp):
+    substance_painter.project.save(substance_painter.project.ProjectSaveMode.Incremental)
+
+    # Create a template from the project:
+    substance_painter.project.save_as_template(
+        "c:/Documents/Adobe/Substance 3D Painter/assets/templates/template.spt",
+        "DefaultMaterial")
+
+
+.. autofunction:: substance_painter.project.needs_saving
+
+.. autofunction:: substance_painter.project.save
+
+.. autofunction:: substance_painter.project.save_as
+
+.. autofunction:: substance_painter.project.save_as_copy
+
+.. autofunction:: substance_painter.project.save_as_template
+
+.. autoclass:: substance_painter.project.ProjectSaveMode
+   :members:
+
+
+Reloading a mesh
+----------------
+
+Example:
+::
+
+    import substance_painter.project
+
+    # Declare the settings for the new mesh loading:
+    mesh_reloading_settings = substance_painter.project.MeshReloadingSettings(
+        import_cameras=True,
+        preserve_strokes=True)
+
+    # Function that will be called when reloading is finished:
+    def on_mesh_reload(status: substance_painter.project.ReloadMeshStatus):
+        import substance_painter.project
+        if status == substance_painter.project.ReloadMeshStatus.SUCCESS:
+            print("The mesh was reloaded successfully.")
+        else:
+            print("The mesh couldn't be reloaded.")
+
+    # Reload the current mesh:
+    substance_painter.project.reload_mesh(
+        'c:/Documents/my_mesh.fbx',
+        mesh_reloading_settings,
+        on_mesh_reload)
+
+.. autofunction:: substance_painter.project.reload_mesh
+
+.. autofunction:: substance_painter.project.last_imported_mesh_path
+
+.. autoclass:: substance_painter.project.MeshReloadingSettings
+   :members:
+
+.. autoclass:: substance_painter.project.ReloadMeshStatus
+   :members:
+
+
+Project metadata
+----------------
+
+ .. autoclass:: substance_painter.project.Metadata
+   :members:
+   :member-order: bysource
+
+
+Events
+------
+
+Project related operations, whether they are initiated through the Python API
+or in the UI, can trigger the following events.
+See :mod:`substance_painter.event` for more details.
+
+.. Note::
+    Project loading is done asynchronously. When the event ``ProjectOpened`` or
+    ``ProjectCreated`` is triggered, the project may still be loading. The event
+    ``ProjectEditionEntered`` is triggered when the project is ready to work with.
+
+.. autoclass:: substance_painter.event.ProjectOpened
+   :noindex:
+   :members:
+
+.. autoclass:: substance_painter.event.ProjectCreated
+   :noindex:
+   :members:
+
+.. autoclass:: substance_painter.event.ProjectAboutToClose
+   :noindex:
+   :members:
+
+.. autoclass:: substance_painter.event.ProjectAboutToSave
+   :noindex:
+   :members:
+
+.. autoclass:: substance_painter.event.ProjectSaved
+   :noindex:
+   :members:
+
+.. autoclass:: substance_painter.event.ProjectEditionEntered
+   :noindex:
+   :members:
+
+.. autoclass:: substance_painter.event.ProjectEditionLeft
+   :noindex:
+   :members:

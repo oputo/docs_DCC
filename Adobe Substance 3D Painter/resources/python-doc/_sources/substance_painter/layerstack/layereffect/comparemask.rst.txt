@@ -1,0 +1,51 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2010-2020 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+Compare Mask effect
+===================
+
+:class:`~substance_painter.layerstack.CompareMaskEffectNode` is an effect that allows to quickly and easily compare two channels and produce a mask as a result. It can only be used in a mask effect stack.
+
+.. seealso::
+   `Compare Mask effect documentation`_.
+
+.. _Compare Mask effect documentation:
+   https://helpx.adobe.com/substance-3d-painter/features/effects/compare-mask.html
+
+.. literalinclude:: ../snippets/comparemask.py
+   :language: python
+   :caption: Example
+
+.. autofunction:: substance_painter.layerstack.insert_compare_mask_effect
+
+.. autoclass:: substance_painter.layerstack.CompareMaskEffectNode
+   :members:
+   :member-order: bysource
+   :show-inheritance:
+
+Params
+------
+
+.. autoclass:: substance_painter.layerstack.CompareMaskEffectParams
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.CompareMaskEffectOperand
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.CompareMaskEffectOperation
+   :members:
+   :member-order: bysource
+

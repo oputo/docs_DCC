@@ -1,0 +1,40 @@
+﻿substance\_sampler.Parameter
+============================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: Parameter
+
+
+   .. automethod:: __init__
+
+
+   .. rubric:: Methods
+
+   .. autosummary::
+
+      ~Parameter.__init__
+      ~Parameter.expose
+      ~Parameter.reset
+      ~Parameter.unexpose
+      ~Parameter.value_labels
+      ~Parameter.enum_values
+
+
+
+
+
+   .. rubric:: Attributes
+
+   .. autosummary::
+
+      ~Parameter.default_value
+      ~Parameter.identifier
+      ~Parameter.label
+      ~Parameter.max_value
+      ~Parameter.min_value
+      ~Parameter.type
+      ~Parameter.value
+      ~Parameter.visible
+      ~Parameter.widget_type
+      ~Parameter.texture_generator_parameters

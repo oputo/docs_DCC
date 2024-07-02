@@ -1,0 +1,368 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2010-2020 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+resource module
+===============
+
+.. automodule:: substance_painter.resource
+   :members:
+   :exclude-members: import_project_resource, import_session_resource,
+      list_layer_stack_resources, Resource, ResourceID, ResourceLocation,
+      search, Shelf, Shelves, show_resources_in_ui, StandardQuery,
+      update_layer_stack_resource, Usage
+
+
+Overview
+--------
+
+Manipulating resources
+**********************
+
+The resource module exposes the class :class:`Resource`, which represents a
+resource currently available in `Substance 3D Painter` (either in the current
+project, current session, or in a shelf).
+
+Listing all the resources of a shelf can be done with :meth:`Shelf.resources`,
+while :func:`search` allows to search for specific resources. Specific resources
+can be shown with a filter directly in the Assets window with
+:func:`Resource.show_in_ui` and :func:`show_resources_in_ui`.
+
+::
+
+    import substance_painter.resource
+
+    # Get all the resources of a shelf:
+    my_shelf = substance_painter.resource.Shelf("myshelf")
+    all_shelf_resources = my_shelf.resources()
+
+    for resource in all_shelf_resources:
+        print(resource.identifier().name)
+
+    # Find all resources that match a name:
+    aluminium_resources = substance_painter.resource.search("aluminium")
+
+    for resource in aluminium_resources:
+        print(resource.identifier().name)
+
+    # Show a single resource in the shelf:
+    aluminium_resources[0].show_in_ui()
+
+    # Show the list of resources found in the shelf:
+    substance_painter.resource.show_resources_in_ui(aluminium_resources)
+
+Internally, resources are identified with a URL; :class:`ResourceID` contains
+that URL. It can be manipulated directly, with no guaranty that the URL is
+referring to an actual resource.
+
+::
+
+    import substance_painter.resource
+
+    # Display the URL of a resource:
+    envmap_resources = substance_painter.resource.search("bonifacio")
+    for envmap in envmap_resources:
+        envmap_id = envmap.identifier()
+        print("The URL of the resource `{0}` is {1}"
+            .format(envmap_id.name, envmap_id.url()))
+        print("The location of the resource `{0}` is {1}"
+            .format(envmap_id.name, envmap_id.location()))
+
+    # It is possible to create a ResourceID from a URL. If there is no
+    # resource corresponding to the URL, the ResourceID is still valid
+    # but refers to a resource that doesn't exist.
+    envmap2_id = substance_painter.resource.ResourceID.from_url(
+        "resource://starter_assets/Bonifacio Street");
+
+    # It is possible to create a ResourceID from a context, a name and
+    # a version (optional). This is equivalent to the above, with the
+    # same caveat.
+    envmap3_id = substance_painter.resource.ResourceID(
+        context="starter_assets", name="Bonifacio Street")
+    envmap4_id = substance_painter.resource.ResourceID(
+        context="starter_assets", name="Bonifacio Street",
+        version="d30facd8d860fc212f864065641cdca4e8006510.image");
+
+    # It is possible to get the ResourceID of a resource embedded in the
+    # current project. This time it refers to an actual resource.
+    envmap5_id = substance_painter.resource.ResourceID.from_project(
+        name="Bonifacio Street");
+
+    # Finally, it is possible to get the ResourceID of a resource that
+    # was imported in the current session:
+    envmap6_id = substance_painter.resource.ResourceID.from_session(
+        name="Bonifacio Street");
+
+
+If the resource exists, it can be retrieved from its identifier with
+:meth:`Resource.retrieve`. When there are several versions of the same resource,
+:meth:`Resource.retrieve` will return the entire list, starting with the most
+recent one. On the contrary, if the resource doesn't exist or was deleted,
+:meth:`Resource.retrieve` will return an empty list.
+
+::
+
+    import substance_painter.resource
+
+    # Create a ResourceID:
+    envmap_id = substance_painter.resource.ResourceID(context="starter_assets",
+                                                        name="Bonifacio Street")
+
+    # Get the resources corresponding to the ResourceID. There can be 0 if there
+    # is no such resource, or more than 1 if there are multiple versions of the
+    # resource.
+    envmap_resources = substance_painter.resource.Resource.retrieve(envmap_id)
+    print("{} resource(s) with that ID".format(len(envmap_resources)))
+
+
+Importing resources
+*******************
+
+New resources can be imported, either
+to the current project with :func:`import_project_resource`,
+to the current session with :func:`import_session_resource`,
+or to a shelf with :func:`Shelf.import_resource`.
+All three functions take a path to the resource to be imported, a :class:`Usage`
+indicating the type of that resource, and optionally a name and a group.
+This feature corresponds to the "Import resources" window.
+
+Resources can be imported into a shelf, as long as it is not a read-only shelf.
+The Substance shelf, installed along the application, is read-only.
+A shelf is also read-only if its path on the file system is read-only.
+This can be checked with :func:`Shelf.can_import_resources`.
+
+Example:
+::
+
+    import substance_painter.resource
+
+    # Open a project we want to import into (see substance_painter.project
+    # for details). This step is not necessary if there is already a project
+    # opened in Substance 3D Painter.
+    import substance_painter.project
+    substance_painter.project.open("C:/projects/MeetMat.spp")
+
+    # Import a normal map to the project:
+    new_resource = substance_painter.resource.import_project_resource(
+        "C:/textures/MyBakedNormalMap.png",
+        substance_painter.resource.Usage.TEXTURE)
+
+    # Import a color LUT to the session:
+    new_color_lut = substance_painter.resource.import_session_resource(
+        "C:/textures/sepia.exr",
+        substance_painter.resource.Usage.COLOR_LUT)
+
+    # Set that color LUT (see substance_painter.display for details).
+    # This step is unrelated to import, and just meant to show how the
+    # imported resource can be used.
+    import substance_painter.display
+    substance_painter.display.set_color_lut_resource(new_color_lut.identifier())
+
+    # Import an environment map to the shelf.
+    my_shelf = substance_painter.resource.Shelf("myshelf")
+    if my_shelf.can_import_resources():
+        new_resource = my_shelf.import_resource(
+            "C:/textures/Bonifacio Street.exr",
+            substance_painter.resource.Usage.ENVIRONMENT)
+    else:
+        print("The shelf is read-only.")
+
+See also:
+    `Adding content via the import window`_.
+
+.. _Adding content via the import window:
+    https://www.adobe.com/go/painter-adding-content-import-window
+
+
+Resources used by a project
+***************************
+
+It is possible to list the resources used by the layer stacks and mesh maps of
+a project with :func:`list_layer_stack_resources`, and to update them with
+:func:`update_layer_stack_resource`.
+
+There may be other resources referenced by a project outside of the layer
+stack and mesh maps: see the :mod:`substance_painter.display` module to
+query and modify them.
+
+Example:
+::
+
+    import substance_painter.resource
+
+    # Open a project we want to manipulate resources from (see
+    # substance_painter.project for details). This step is not necessary
+    # if there is already a project opened in Substance Painter.
+    import substance_painter.project
+    substance_painter.project.open("C:/projects/MeetMat.spp")
+
+    # List all the resources referenced by all the layer stacks and
+    # mesh maps:
+    used_resources_ids = substance_painter.resource.list_layer_stack_resources()
+    for resource_id in used_resources_ids:
+        print(resource_id.name)
+
+    # Import a normal map to the project:
+    new_resource = substance_painter.resource.import_project_resource(
+        "C:/textures/MyBakedNormalMap.png",
+        substance_painter.resource.Usage.TEXTURE)
+
+    # Replace one of the resources with the new imported resource:
+    substance_painter.resource.update_layer_stack_resource(used_resources_ids[0], new_resource)
+
+
+Custom preview
+**************
+
+When a resource is imported, a thumbnail is automatically generated for it.
+It is possible to replace that thumbnail with a custom preview by using
+:meth:`Resource.set_custom_preview`, or reset the preview with
+:meth:`Resource.reset_preview`.
+
+Example:
+::
+
+    import substance_painter.resource
+
+    aluminium_resources = substance_painter.resource.search("aluminium")
+    resource = aluminium_resources[0]
+
+    # Set the custom preview:
+    resource.set_custom_preview("C:/textures/MyCustomPreview.png")
+
+    # Remove the custom preview:
+    resource.reset_preview()
+
+
+Resource crawling
+*****************
+
+When `Substance 3D Painter` is opened, it will browse the different shelves
+to discover and index resources, and display their thumbnail. When it regains
+focus after switching to another application, it will do so again, in case
+the user added a new asset to their shelf folder. This process is referred
+to as **resource crawling**.
+
+When a shelf starts crawling, an event
+:class:`substance_painter.event.ShelfCrawlingStarted` is emitted for that
+shelf. When crawling is finished, an event
+:class:`substance_painter.event.ShelfCrawlingEnded` is emitted for that
+shelf. At any time, :func:`Shelf.is_crawling` will tell if a shelf is
+crawling or not.
+
+It is possible from a Python script to explicitly trigger a new resource
+crawling with :func:`Shelves.refresh_all`.
+
+Example:
+::
+
+    import substance_painter.resource
+    import substance_painter.event
+
+    # Two event handlers to show when crawling starts and ends:
+    def on_start_crawl(e):
+        print("Shelf `{}` started crawling.".format(e.shelf_name))
+
+    def on_end_crawl(e):
+        print("Shelf `{}` finished crawling.".format(e.shelf_name))
+
+    # Use the event handler to listen to ShelfCrawlingStarted and
+    # ShelfCrawlingEnded:
+    substance_painter.event.DISPATCHER.connect(
+        substance_painter.event.ShelfCrawlingStarted,
+        on_start_crawl)
+
+    substance_painter.event.DISPATCHER.connect(
+        substance_painter.event.ShelfCrawlingEnded,
+        on_end_crawl)
+
+    # At this point, the event handlers may or may not print something,
+    # depending on what the shelves are doing. It is possible to trigger
+    # a crawling by switching to another application, and coming back
+    # to Substance 3D Painter.
+
+    # It is also possible to trigger a crawling with this call:
+    substance_painter.resource.Shelves.refresh_all()
+
+    my_shelf = substance_painter.resource.Shelf("myshelf")
+
+    # Running this bloc at different moments will give different
+    # results:
+    if my_shelf.is_crawling():
+        print("The shelf is crawling...")
+    else:
+        print("The shelf is idle.")
+
+Resources
+---------
+
+.. autoclass:: substance_painter.resource.Resource
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.resource.ResourceID
+   :members:
+   :member-order: groupwise
+
+.. autoclass:: substance_painter.resource.ResourceLocation
+   :members:
+
+.. autoclass:: substance_painter.resource.StandardQuery
+   :members:
+
+.. autoclass:: substance_painter.resource.Usage
+   :members:
+
+.. autofunction:: substance_painter.resource.search
+
+.. autofunction:: substance_painter.resource.list_layer_stack_resources
+
+.. autofunction:: substance_painter.resource.update_layer_stack_resource
+
+.. autofunction:: substance_painter.resource.import_project_resource
+
+.. autofunction:: substance_painter.resource.import_session_resource
+
+.. autofunction:: substance_painter.resource.show_resources_in_ui
+
+
+Shelves
+-------
+
+See also:
+    `Shelf configuration`_.
+
+.. _Shelf configuration:
+    https://www.adobe.com/go/painter-shelf-configuration
+
+.. autoclass:: substance_painter.resource.Shelf
+   :members:
+
+.. autoclass:: substance_painter.resource.Shelves
+   :members:
+
+
+Events
+------
+
+Project related operations, whether they are initiated through the Python API
+or in the UI, can trigger the following events.
+See :mod:`substance_painter.event` for more details.
+
+.. autoclass:: substance_painter.event.ShelfCrawlingStarted
+   :noindex:
+   :members:
+
+.. autoclass:: substance_painter.event.ShelfCrawlingEnded
+   :noindex:
+   :members:

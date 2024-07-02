@@ -1,0 +1,107 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2010-2020 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+Fill layer and effect
+=====================
+
+:class:`~substance_painter.layerstack.FillLayerNode` and :class:`~substance_painter.layerstack.FillEffectNode` are types of nodes that cannot be painted on, instead a material can be loaded into it or resources can be loaded into channels individually.
+
+.. literalinclude:: ../snippets/fill.py
+   :language: python
+   :caption: Example
+   :name: fill_example
+
+.. autofunction:: substance_painter.layerstack.insert_fill
+
+.. autoclass:: substance_painter.layerstack.FillLayerNode
+   :members:
+   :member-order: bysource
+   :inherited-members: LayerNode
+   :show-inheritance:
+
+.. autoclass:: substance_painter.layerstack.FillEffectNode
+   :members:
+   :member-order: bysource
+   :inherited-members: Node
+   :show-inheritance:
+
+Params
+------
+
+.. autoclass:: substance_painter.layerstack.UVProjectionParams
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.TriplanarProjectionParams
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.PlanarProjectionParams
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.SphericalProjectionParams
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.CylindricalProjectionParams
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.WarpProjectionParams
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.UVSetToUVSetProjectionParams
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.UVTransformationParams
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.Projection3DParams
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.ProjectionCullingParams
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.ProjectionParams
+   :members:
+   :member-order: bysource
+
+Enums
+-----
+
+.. autoclass:: substance_painter.layerstack.ProjectionMode
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.FilteringMode
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.UVWrapMode
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.ShapeCropMode
+   :members:
+   :member-order: bysource
+
+.. autoclass:: substance_painter.layerstack.ScaleMode
+   :members:
+   :member-order: bysource

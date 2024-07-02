@@ -1,0 +1,6 @@
+﻿substance\_sampler.open\_project
+================================
+
+.. currentmodule:: substance_sampler
+
+.. autofunction:: open_project

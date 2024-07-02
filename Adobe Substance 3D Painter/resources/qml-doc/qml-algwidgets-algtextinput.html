@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- AlgTextInput.qml -->
+  <title>AlgTextInput QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgTextInput QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgTextInput-brief -->
+<p>A text input with Substance 3D Painter style. <a href="#details">More...</a></p>
+<!-- @@@AlgTextInput -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-textinput.html" translate="no">TextInput</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-algtextinput-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algtextinput.html#backgroundColor-prop" translate="no">backgroundColor</a></b></b> : color</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algtextinput.html#borderActivated-prop" translate="no">borderActivated</a></b></b> : bool</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algtextinput.html#borderColor-prop" translate="no">borderColor</a></b></b> : color</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algtextinput.html#borderOpacity-prop" translate="no">borderOpacity</a></b></b> : real</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algtextinput.html#tooltip-prop" translate="no">tooltip</a></b></b> : string</li>
+</ul>
+<!-- $$$AlgTextInput-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>A text input with Substance 3D Painter style. This class is part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<pre class="qml" translate="no">import AlgWidgets 2.0
+import QtQuick.Layouts 1.3
+
+<span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-layouts-rowlayout.html" translate="no">RowLayout</a></span> {
+  <span class="name">id</span>: <span class="name">root</span>
+  <span class="type"><a href="qml-algwidgets-algtextinput.html" translate="no">AlgTextInput</a></span> {
+    <span class="name">Layout</span>.preferredWidth: <span class="number">100</span>
+    <span class="name">onFocusChanged</span>: {
+      <span class="name">alg</span>.<span class="name">log</span>.<span class="name">warn</span>(<span class="string">&quot;edited: &quot;</span> <span class="operator">+</span> <span class="name">focus</span>)
+    }
+  }
+}</pre>
+<!-- @@@AlgTextInput -->
+<h2>Property Documentation</h2>
+<!-- $$$backgroundColor -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="backgroundColor-prop">
+<td class="tblQmlPropNode"><p>
+<a name="backgroundColor-prop"></a><span class="name">backgroundColor</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-color.html" translate="no">color</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>The optional background color.</p>
+</div></div><!-- @@@backgroundColor -->
+<br/>
+<!-- $$$borderActivated -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="borderActivated-prop">
+<td class="tblQmlPropNode"><p>
+<a name="borderActivated-prop"></a><span class="name">borderActivated</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-bool.html" translate="no">bool</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Determines if the text edit must be surround by a border.</p>
+<p>By default, <i translate="no">borderActivated</i> is set to true.</p>
+</div></div><!-- @@@borderActivated -->
+<br/>
+<!-- $$$borderColor -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="borderColor-prop">
+<td class="tblQmlPropNode"><p>
+<a name="borderColor-prop"></a><span class="name">borderColor</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-color.html" translate="no">color</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>The optional border color.</p>
+</div></div><!-- @@@borderColor -->
+<br/>
+<!-- $$$borderOpacity -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="borderOpacity-prop">
+<td class="tblQmlPropNode"><p>
+<a name="borderOpacity-prop"></a><span class="name">borderOpacity</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-real.html" translate="no">real</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>The optional border opacity.</p>
+<p>By default, <i translate="no">borderOpacity</i> is set to 1.</p>
+</div></div><!-- @@@borderOpacity -->
+<br/>
+<!-- $$$tooltip -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="tooltip-prop">
+<td class="tblQmlPropNode"><p>
+<a name="tooltip-prop"></a><span class="name">tooltip</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-string.html" translate="no">string</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Tooltip text associated with the textinput.</p>
+</div></div><!-- @@@tooltip -->
+<br/>
+</body>
+</html>

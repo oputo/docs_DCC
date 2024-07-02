@@ -1,0 +1,122 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2010-2020 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+event module
+============
+
+.. automodule:: substance_painter.event
+   :members:
+   :exclude-members: DISPATCHER, Dispatcher, ExportTexturesAboutToStart, ExportTexturesEnded, ProjectOpened, ProjectCreated, ProjectAboutToClose, ProjectAboutToSave, ProjectSaved, ShelfCrawlingStarted, ShelfCrawlingEnded, ProjectEditionEntered, ProjectEditionLeft, BusyStatusChanged, TextureStateEvent, TextureStateEventAction, BakingProcessAboutToStart, BakingProcessProgress, BakingProcessEnded, LayerStacksModelDataChanged, EngineComputationsStatusChanged, CameraPropertiesChanged
+   :member-order: bysource
+
+
+Event dispatcher
+----------------
+
+.. autodata:: substance_painter.event.DISPATCHER
+
+.. autoclass:: substance_painter.event.Dispatcher
+   :members:
+
+
+Export events
+-------------
+
+.. autoclass:: substance_painter.event.ExportTexturesAboutToStart
+   :members:
+
+.. autoclass:: substance_painter.event.ExportTexturesEnded
+   :members:
+
+
+Project events
+--------------
+
+.. Note::
+    Project loading is done asynchronously. When the event ``ProjectOpened`` or
+    ``ProjectCreated`` is triggered, the project may still be loading. The event
+    ``ProjectEditionEntered`` is triggered when the project is ready to work with.
+
+.. autoclass:: substance_painter.event.ProjectOpened
+   :members:
+
+.. autoclass:: substance_painter.event.ProjectCreated
+   :members:
+
+.. autoclass:: substance_painter.event.ProjectAboutToClose
+   :members:
+
+.. autoclass:: substance_painter.event.ProjectAboutToSave
+   :members:
+
+.. autoclass:: substance_painter.event.ProjectSaved
+   :members:
+
+.. autoclass:: substance_painter.event.ProjectEditionEntered
+   :members:
+
+.. autoclass:: substance_painter.event.ProjectEditionLeft
+   :members:
+
+.. autoclass:: substance_painter.event.BusyStatusChanged
+   :members:
+
+.. autoclass:: substance_painter.event.TextureStateEvent
+   :members:
+
+.. autoclass:: substance_painter.event.TextureStateEventAction
+   :members:
+
+
+Shelf events
+------------
+
+.. autoclass:: substance_painter.event.ShelfCrawlingStarted
+   :members:
+
+.. autoclass:: substance_painter.event.ShelfCrawlingEnded
+   :members:
+
+Baking events
+-------------
+
+.. autoclass:: substance_painter.event.BakingProcessAboutToStart
+   :members:
+
+.. autoclass:: substance_painter.event.BakingProcessProgress
+   :members:
+
+.. autoclass:: substance_painter.event.BakingProcessEnded
+   :members:
+
+Layer stack events
+------------------
+
+.. literalinclude:: snippets/eventlayerstack.py
+   :language: python
+
+.. autoclass:: substance_painter.event.LayerStacksModelDataChanged
+   :members:
+
+Application wide events
+-----------------------
+
+.. autoclass:: substance_painter.event.EngineComputationsStatusChanged
+   :members:
+
+Display events
+--------------
+
+.. autoclass:: substance_painter.event.CameraPropertiesChanged
+   :members:

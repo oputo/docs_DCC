@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>substance_sampler.Asset &mdash; Substance 3D Sampler Python API 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="substance_sampler.Layer" href="substance_sampler.Layer.html" />
+    <link rel="prev" title="substance_sampler.ImageResolutionOptions" href="substance_sampler.ImageResolutionOptions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #f7f7f7" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Substance 3D Sampler Python API
+              <img src="../_static/sa_appicon_256.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                4.4.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../substance_sampler.html">substance_sampler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../substance_sampler.html#functions">Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.create_project.html">substance_sampler.create_project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.create_project.html#substance_sampler.create_project"><code class="docutils literal notranslate"><span class="pre">create_project()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.save_project.html">substance_sampler.save_project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.save_project.html#substance_sampler.save_project"><code class="docutils literal notranslate"><span class="pre">save_project()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.save_project_as.html">substance_sampler.save_project_as</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.save_project_as.html#substance_sampler.save_project_as"><code class="docutils literal notranslate"><span class="pre">save_project_as()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.open_project.html">substance_sampler.open_project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.open_project.html#substance_sampler.open_project"><code class="docutils literal notranslate"><span class="pre">open_project()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.get_project_path.html">substance_sampler.get_project_path</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.get_project_path.html#substance_sampler.get_project_path"><code class="docutils literal notranslate"><span class="pre">get_project_path()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.get_project_assets.html">substance_sampler.get_project_assets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.get_project_assets.html#substance_sampler.get_project_assets"><code class="docutils literal notranslate"><span class="pre">get_project_assets()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.get_selected_asset.html">substance_sampler.get_selected_asset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.get_selected_asset.html#substance_sampler.get_selected_asset"><code class="docutils literal notranslate"><span class="pre">get_selected_asset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.create_asset.html">substance_sampler.create_asset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.create_asset.html#substance_sampler.create_asset"><code class="docutils literal notranslate"><span class="pre">create_asset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.delete_asset.html">substance_sampler.delete_asset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.delete_asset.html#substance_sampler.delete_asset"><code class="docutils literal notranslate"><span class="pre">delete_asset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.get_filters.html">substance_sampler.get_filters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.get_filters.html#substance_sampler.get_filters"><code class="docutils literal notranslate"><span class="pre">get_filters()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.get_materials.html">substance_sampler.get_materials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.get_materials.html#substance_sampler.get_materials"><code class="docutils literal notranslate"><span class="pre">get_materials()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.get_texture_generators.html">substance_sampler.get_texture_generators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.get_texture_generators.html#substance_sampler.get_texture_generators"><code class="docutils literal notranslate"><span class="pre">get_texture_generators()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.get_export_presets.html">substance_sampler.get_export_presets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.get_export_presets.html#substance_sampler.get_export_presets"><code class="docutils literal notranslate"><span class="pre">get_export_presets()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.run_in_main_thread.html">substance_sampler.run_in_main_thread</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.run_in_main_thread.html#substance_sampler.run_in_main_thread"><code class="docutils literal notranslate"><span class="pre">run_in_main_thread()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.create_3d_capture.html">substance_sampler.create_3d_capture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.create_3d_capture.html#substance_sampler.create_3d_capture"><code class="docutils literal notranslate"><span class="pre">create_3d_capture()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.wait_for_computation.html">substance_sampler.wait_for_computation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.wait_for_computation.html#substance_sampler.wait_for_computation"><code class="docutils literal notranslate"><span class="pre">wait_for_computation()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.clear_render_cache.html">substance_sampler.clear_render_cache</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.clear_render_cache.html#substance_sampler.clear_render_cache"><code class="docutils literal notranslate"><span class="pre">clear_render_cache()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../substance_sampler.html#classes">Classes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.ImageResolutionOptions.html">substance_sampler.ImageResolutionOptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.ImageResolutionOptions.html#substance_sampler.ImageResolutionOptions"><code class="docutils literal notranslate"><span class="pre">ImageResolutionOptions</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.ImageResolutionOptions.html#substance_sampler.ImageResolutionOptions.__init__"><code class="docutils literal notranslate"><span class="pre">ImageResolutionOptions.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.ImageResolutionOptions.html#substance_sampler.ImageResolutionOptions.add_crop"><code class="docutils literal notranslate"><span class="pre">ImageResolutionOptions.add_crop</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.ImageResolutionOptions.html#substance_sampler.ImageResolutionOptions.document_resolution"><code class="docutils literal notranslate"><span class="pre">ImageResolutionOptions.document_resolution</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.ImageResolutionOptions.html#substance_sampler.ImageResolutionOptions.policy"><code class="docutils literal notranslate"><span class="pre">ImageResolutionOptions.policy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.ImageResolutionOptions.html#substance_sampler.ImageResolutionOptions.upscale"><code class="docutils literal notranslate"><span class="pre">ImageResolutionOptions.upscale</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">substance_sampler.Asset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#substance_sampler.Asset"><code class="docutils literal notranslate"><span class="pre">Asset</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.document_resolution"><code class="docutils literal notranslate"><span class="pre">Asset.document_resolution</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.export"><code class="docutils literal notranslate"><span class="pre">Asset.export()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.export_3d_object"><code class="docutils literal notranslate"><span class="pre">Asset.export_3d_object()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.export_environment_light"><code class="docutils literal notranslate"><span class="pre">Asset.export_environment_light()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.export_material"><code class="docutils literal notranslate"><span class="pre">Asset.export_material()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.export_mesh"><code class="docutils literal notranslate"><span class="pre">Asset.export_mesh()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.get_layers"><code class="docutils literal notranslate"><span class="pre">Asset.get_layers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.import_images"><code class="docutils literal notranslate"><span class="pre">Asset.import_images()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.import_textures"><code class="docutils literal notranslate"><span class="pre">Asset.import_textures()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.insert_filter"><code class="docutils literal notranslate"><span class="pre">Asset.insert_filter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.insert_material"><code class="docutils literal notranslate"><span class="pre">Asset.insert_material()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.metadata"><code class="docutils literal notranslate"><span class="pre">Asset.metadata</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.name"><code class="docutils literal notranslate"><span class="pre">Asset.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.remove_layer"><code class="docutils literal notranslate"><span class="pre">Asset.remove_layer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.resource"><code class="docutils literal notranslate"><span class="pre">Asset.resource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_sampler.Asset.type"><code class="docutils literal notranslate"><span class="pre">Asset.type</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.Layer.html">substance_sampler.Layer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer"><code class="docutils literal notranslate"><span class="pre">Layer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.__init__"><code class="docutils literal notranslate"><span class="pre">Layer.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.apply_preset"><code class="docutils literal notranslate"><span class="pre">Layer.apply_preset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.blend_mode"><code class="docutils literal notranslate"><span class="pre">Layer.blend_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.blend_parameters"><code class="docutils literal notranslate"><span class="pre">Layer.blend_parameters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.name"><code class="docutils literal notranslate"><span class="pre">Layer.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.output_usages"><code class="docutils literal notranslate"><span class="pre">Layer.output_usages</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.parameters"><code class="docutils literal notranslate"><span class="pre">Layer.parameters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.position"><code class="docutils literal notranslate"><span class="pre">Layer.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.presets"><code class="docutils literal notranslate"><span class="pre">Layer.presets</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.replace_by_filter"><code class="docutils literal notranslate"><span class="pre">Layer.replace_by_filter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.replace_by_material"><code class="docutils literal notranslate"><span class="pre">Layer.replace_by_material()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.reset_default_values"><code class="docutils literal notranslate"><span class="pre">Layer.reset_default_values()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer.type"><code class="docutils literal notranslate"><span class="pre">Layer.type</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.Parameter.html">substance_sampler.Parameter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.Parameter.html#substance_sampler.Parameter"><code class="docutils literal notranslate"><span class="pre">Parameter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Parameter.html#substance_sampler.Parameter.__init__"><code class="docutils literal notranslate"><span class="pre">Parameter.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.Metadata.html">substance_sampler.Metadata</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.Metadata.html#substance_sampler.Metadata"><code class="docutils literal notranslate"><span class="pre">Metadata</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Metadata.html#substance_sampler.Metadata.__init__"><code class="docutils literal notranslate"><span class="pre">Metadata.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Metadata.html#substance_sampler.Metadata.author"><code class="docutils literal notranslate"><span class="pre">Metadata.author</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Metadata.html#substance_sampler.Metadata.category"><code class="docutils literal notranslate"><span class="pre">Metadata.category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Metadata.html#substance_sampler.Metadata.custom_metadata"><code class="docutils literal notranslate"><span class="pre">Metadata.custom_metadata</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Metadata.html#substance_sampler.Metadata.description"><code class="docutils literal notranslate"><span class="pre">Metadata.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Metadata.html#substance_sampler.Metadata.name"><code class="docutils literal notranslate"><span class="pre">Metadata.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Metadata.html#substance_sampler.Metadata.physical_size"><code class="docutils literal notranslate"><span class="pre">Metadata.physical_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Metadata.html#substance_sampler.Metadata.tags"><code class="docutils literal notranslate"><span class="pre">Metadata.tags</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.Resource.html">substance_sampler.Resource</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.Resource.html#substance_sampler.Resource"><code class="docutils literal notranslate"><span class="pre">Resource</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Resource.html#substance_sampler.Resource.__init__"><code class="docutils literal notranslate"><span class="pre">Resource.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.ExportController.html">substance_sampler.ExportController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.ExportController.html#substance_sampler.ExportController"><code class="docutils literal notranslate"><span class="pre">ExportController</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.ExportController.html#substance_sampler.ExportController.__init__"><code class="docutils literal notranslate"><span class="pre">ExportController.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.ExportController.html#substance_sampler.ExportController.cancel"><code class="docutils literal notranslate"><span class="pre">ExportController.cancel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.ExportController.html#substance_sampler.ExportController.on_canceled"><code class="docutils literal notranslate"><span class="pre">ExportController.on_canceled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.ExportController.html#substance_sampler.ExportController.on_failed"><code class="docutils literal notranslate"><span class="pre">ExportController.on_failed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.ExportController.html#substance_sampler.ExportController.on_finished"><code class="docutils literal notranslate"><span class="pre">ExportController.on_finished()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.ExportController.html#substance_sampler.ExportController.wait"><code class="docutils literal notranslate"><span class="pre">ExportController.wait()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.ExportController.html#substance_sampler.ExportController.wait_for"><code class="docutils literal notranslate"><span class="pre">ExportController.wait_for()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.Capture_3d.html">substance_sampler.Capture_3d</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.Capture_3d.html#substance_sampler.Capture_3d"><code class="docutils literal notranslate"><span class="pre">Capture_3d</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Capture_3d.html#substance_sampler.Capture_3d.align"><code class="docutils literal notranslate"><span class="pre">Capture_3d.align()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Capture_3d.html#substance_sampler.Capture_3d.dataset_info"><code class="docutils literal notranslate"><span class="pre">Capture_3d.dataset_info</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Capture_3d.html#substance_sampler.Capture_3d.export_point_cloud"><code class="docutils literal notranslate"><span class="pre">Capture_3d.export_point_cloud()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Capture_3d.html#substance_sampler.Capture_3d.get_point_cloud"><code class="docutils literal notranslate"><span class="pre">Capture_3d.get_point_cloud()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Capture_3d.html#substance_sampler.Capture_3d.import_folder"><code class="docutils literal notranslate"><span class="pre">Capture_3d.import_folder()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Capture_3d.html#substance_sampler.Capture_3d.import_images"><code class="docutils literal notranslate"><span class="pre">Capture_3d.import_images()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Capture_3d.html#substance_sampler.Capture_3d.reconstruct_from_folder"><code class="docutils literal notranslate"><span class="pre">Capture_3d.reconstruct_from_folder()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Capture_3d.html#substance_sampler.Capture_3d.reconstruct_from_images"><code class="docutils literal notranslate"><span class="pre">Capture_3d.reconstruct_from_images()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Capture_3d.html#substance_sampler.Capture_3d.reconstruct_mesh"><code class="docutils literal notranslate"><span class="pre">Capture_3d.reconstruct_mesh()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Capture_3d.html#substance_sampler.Capture_3d.state"><code class="docutils literal notranslate"><span class="pre">Capture_3d.state</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.DatasetInfo.html">substance_sampler.DatasetInfo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.DatasetInfo.html#substance_sampler.DatasetInfo"><code class="docutils literal notranslate"><span class="pre">DatasetInfo</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.DatasetInfo.html#substance_sampler.DatasetInfo.cameras"><code class="docutils literal notranslate"><span class="pre">DatasetInfo.cameras</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.DatasetInfo.html#substance_sampler.DatasetInfo.image_paths"><code class="docutils literal notranslate"><span class="pre">DatasetInfo.image_paths</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.DatasetInfo.html#substance_sampler.DatasetInfo.mask_paths"><code class="docutils literal notranslate"><span class="pre">DatasetInfo.mask_paths</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.CameraInformation.html">substance_sampler.CameraInformation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.CameraInformation.html#substance_sampler.CameraInformation"><code class="docutils literal notranslate"><span class="pre">CameraInformation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.Usage.html">substance_sampler.Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.Usage.html#substance_sampler.Usage"><code class="docutils literal notranslate"><span class="pre">Usage</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_sampler.Usage.html#substance_sampler.Usage.__init__"><code class="docutils literal notranslate"><span class="pre">Usage.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../substance_sampler.html#enumerations">Enumerations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.Type.html">substance_sampler.Type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.Type.html#substance_sampler.Type"><code class="docutils literal notranslate"><span class="pre">Type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.Widget.html">substance_sampler.Widget</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.Widget.html#substance_sampler.Widget"><code class="docutils literal notranslate"><span class="pre">Widget</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.LayerType.html">substance_sampler.LayerType</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.LayerType.html#substance_sampler.LayerType"><code class="docutils literal notranslate"><span class="pre">LayerType</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.ExportFormat.html">substance_sampler.ExportFormat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.ExportFormat.html#substance_sampler.ExportFormat"><code class="docutils literal notranslate"><span class="pre">ExportFormat</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.MaterialExportFormat.html">substance_sampler.MaterialExportFormat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.MaterialExportFormat.html#substance_sampler.MaterialExportFormat"><code class="docutils literal notranslate"><span class="pre">MaterialExportFormat</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.EnvironmentLightExportFormat.html">substance_sampler.EnvironmentLightExportFormat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.EnvironmentLightExportFormat.html#substance_sampler.EnvironmentLightExportFormat"><code class="docutils literal notranslate"><span class="pre">EnvironmentLightExportFormat</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.MeshExportFormat.html">substance_sampler.MeshExportFormat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.MeshExportFormat.html#substance_sampler.MeshExportFormat"><code class="docutils literal notranslate"><span class="pre">MeshExportFormat</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.MaterialType.html">substance_sampler.MaterialType</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.MaterialType.html#substance_sampler.MaterialType"><code class="docutils literal notranslate"><span class="pre">MaterialType</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.ImageImportOption.html">substance_sampler.ImageImportOption</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.ImageImportOption.html#substance_sampler.ImageImportOption"><code class="docutils literal notranslate"><span class="pre">ImageImportOption</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.BlendMode.html">substance_sampler.BlendMode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.BlendMode.html#substance_sampler.BlendMode"><code class="docutils literal notranslate"><span class="pre">BlendMode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.AssetType.html">substance_sampler.AssetType</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.AssetType.html#substance_sampler.AssetType"><code class="docutils literal notranslate"><span class="pre">AssetType</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.WaitStatus.html">substance_sampler.WaitStatus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.WaitStatus.html#substance_sampler.WaitStatus"><code class="docutils literal notranslate"><span class="pre">WaitStatus</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.Capture3dState.html">substance_sampler.Capture3dState</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.Capture3dState.html#substance_sampler.Capture3dState"><code class="docutils literal notranslate"><span class="pre">Capture3dState</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.Capture3dPrecision.html">substance_sampler.Capture3dPrecision</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.Capture3dPrecision.html#substance_sampler.Capture3dPrecision"><code class="docutils literal notranslate"><span class="pre">Capture3dPrecision</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.Capture3dOrdering.html">substance_sampler.Capture3dOrdering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.Capture3dOrdering.html#substance_sampler.Capture3dOrdering"><code class="docutils literal notranslate"><span class="pre">Capture3dOrdering</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.Capture3dReconstructionDetails.html">substance_sampler.Capture3dReconstructionDetails</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.Capture3dReconstructionDetails.html#substance_sampler.Capture3dReconstructionDetails"><code class="docutils literal notranslate"><span class="pre">Capture3dReconstructionDetails</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_sampler.ImageImportResolutionPolicy.html">substance_sampler.ImageImportResolutionPolicy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_sampler.ImageImportResolutionPolicy.html#substance_sampler.ImageImportResolutionPolicy"><code class="docutils literal notranslate"><span class="pre">ImageImportResolutionPolicy</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #f7f7f7" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Substance 3D Sampler Python API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../substance_sampler.html">substance_sampler</a></li>
+      <li class="breadcrumb-item active">substance_sampler.Asset</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_generate/substance_sampler.Asset.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="substance_sampler.ImageResolutionOptions.html" class="btn btn-neutral float-left" title="substance_sampler.ImageResolutionOptions" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="substance_sampler.Layer.html" class="btn btn-neutral float-right" title="substance_sampler.Layer" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="substance-sampler-asset">
+<h1>substance_sampler.Asset<a class="headerlink" href="#substance-sampler-asset" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="substance_sampler.Asset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_sampler.</span></span><span class="sig-name descname"><span class="pre">Asset</span></span><a class="headerlink" href="#substance_sampler.Asset" title="Link to this definition"></a></dt>
+<dd><p>Description of a Sampler asset</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#substance_sampler.Asset.export" title="substance_sampler.Asset.export"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code></a>(self, w_resolution, h_resolution, ...)</p></td>
+<td><p>Export an asset</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#substance_sampler.Asset.export_material" title="substance_sampler.Asset.export_material"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_material</span></code></a>(self, path, name, subfolder, ...)</p></td>
+<td><p>Export asset's material (either form a material asset or a 3D object asset)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#substance_sampler.Asset.export_environment_light" title="substance_sampler.Asset.export_environment_light"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_environment_light</span></code></a>(self, path, name, ...)</p></td>
+<td><p>Export an environment light asset</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#substance_sampler.Asset.export_mesh" title="substance_sampler.Asset.export_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_mesh</span></code></a>(self, path, name, subfolder, ...)</p></td>
+<td><p>Export mesh part of a 3D object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#substance_sampler.Asset.export_3d_object" title="substance_sampler.Asset.export_3d_object"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_3d_object</span></code></a>(self, path, name, ...)</p></td>
+<td><p>Export 3D object asset : both mesh and material</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#substance_sampler.Asset.get_layers" title="substance_sampler.Asset.get_layers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_layers</span></code></a>(self)</p></td>
+<td><p>Get all layers of an asset</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#substance_sampler.Asset.import_images" title="substance_sampler.Asset.import_images"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_images</span></code></a>(self, images, position, ...)</p></td>
+<td><p>Import a list of images in an asset</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#substance_sampler.Asset.import_textures" title="substance_sampler.Asset.import_textures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_textures</span></code></a>(self, images, position, ...)</p></td>
+<td><p>Import a list of images in an asset, each one with a dedicated usage</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#substance_sampler.Asset.insert_filter" title="substance_sampler.Asset.insert_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insert_filter</span></code></a>(self, filter, position)</p></td>
+<td><p>Insert a filter in an asset</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#substance_sampler.Asset.insert_material" title="substance_sampler.Asset.insert_material"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insert_material</span></code></a>(self, material, position, ...)</p></td>
+<td><p>Insert a material in an asset</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#substance_sampler.Asset.remove_layer" title="substance_sampler.Asset.remove_layer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_layer</span></code></a>(self, arg0)</p></td>
+<td><p>Remove a layer from an asset</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#substance_sampler.Asset.document_resolution" title="substance_sampler.Asset.document_resolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">document_resolution</span></code></a></p></td>
+<td><p>Asset document resolution</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#substance_sampler.Asset.metadata" title="substance_sampler.Asset.metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metadata</span></code></a></p></td>
+<td><p>Asset's Metadata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#substance_sampler.Asset.resource" title="substance_sampler.Asset.resource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resource</span></code></a></p></td>
+<td><p>A Resource referencing current asset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#substance_sampler.Asset.name" title="substance_sampler.Asset.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p>Assets name</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#substance_sampler.Asset.type" title="substance_sampler.Asset.type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p></td>
+<td><p>Asset's type</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py property">
+<dt class="sig sig-object py" id="substance_sampler.Asset.document_resolution">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">document_resolution</span></span><a class="headerlink" href="#substance_sampler.Asset.document_resolution" title="Link to this definition"></a></dt>
+<dd><p>Asset document resolution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[int, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_sampler.Asset.export">
+<span class="sig-name descname"><span class="pre">export</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">substance_sampler.Asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_resolution:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_resolution:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format:</span> <span class="pre">substance_sampler.ExportFormat</span> <span class="pre">=</span> <span class="pre">&lt;ExportFormat.sbsar:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset:</span> <span class="pre">substance_sampler.Resource</span> <span class="pre">=</span> <span class="pre">Resource(</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lifespan=temporary)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channels:</span> <span class="pre">List[str]</span> <span class="pre">=</span> <span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfolder:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physical_ratio:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#substance_sampler.Asset.export" title="Link to this definition"></a></dt>
+<dd><p>Export an asset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>w_resolution</strong> (<em>int</em>) – Width resolution in pixel</p></li>
+<li><p><strong>h_resolution</strong> (<em>int</em>) – Height resolution in pixel</p></li>
+<li><p><strong>path</strong> (<em>str</em>) – Export folder path</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name of the exported file(s): By default: name is the Asset’s name</p></li>
+<li><p><strong>format</strong> (<a class="reference internal" href="substance_sampler.ExportFormat.html#substance_sampler.ExportFormat" title="substance_sampler.ExportFormat"><em>ExportFormat</em></a>) – Format Enum (sbsar, sbs, png, …). By default: sbsar</p></li>
+<li><p><strong>preset</strong> (<a class="reference internal" href="substance_sampler.Resource.html#substance_sampler.Resource" title="substance_sampler.Resource"><em>Resource</em></a>) – Resource representing export preset. By default: empty preset</p></li>
+<li><p><strong>channels</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – list of channels. By default: all channels of current workflow</p></li>
+<li><p><strong>subfolder</strong> (<em>bool</em>) – Export in a subfolder. False by default</p></li>
+<li><p><strong>physical_ratio</strong> (<em>bool</em>) – Export with physical ratio. False by default</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – Overwrite if files already exist. True by default</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Export folder path</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 3.4.0: </span>export method is deprecated and will be removed in a future version of this API. Please consider using export_material instead</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_sampler.Asset.export_3d_object">
+<span class="sig-name descname"><span class="pre">export_3d_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">substance_sampler.Asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfolder:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh_format:</span> <span class="pre">substance_sampler.MeshExportFormat</span> <span class="pre">=</span> <span class="pre">&lt;MeshExportFormat.usd:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">material_format:</span> <span class="pre">substance_sampler.MaterialExportFormat</span> <span class="pre">=</span> <span class="pre">&lt;MaterialExportFormat.sbsar:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">material_type:</span> <span class="pre">substance_sampler.MaterialType</span> <span class="pre">=</span> <span class="pre">&lt;MaterialType.standard:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset:</span> <span class="pre">substance_sampler.Resource</span> <span class="pre">=</span> <span class="pre">Resource(</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lifespan=temporary)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_resolution:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_resolution:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channels:</span> <span class="pre">List[str]</span> <span class="pre">=</span> <span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physical_ratio:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller:</span> <span class="pre">substance_sampler.ExportController</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#substance_sampler.Asset.export_3d_object" title="Link to this definition"></a></dt>
+<dd><p>Export 3D object asset : both mesh and material</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Export folder path</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name of the exported file(s): By default: name is the Asset’s name</p></li>
+<li><p><strong>subfolder</strong> (<em>bool</em>) – Export in a subfolder. False by default</p></li>
+<li><p><strong>mesh_format</strong> (<a class="reference internal" href="substance_sampler.MeshExportFormat.html#substance_sampler.MeshExportFormat" title="substance_sampler.MeshExportFormat"><em>MeshExportFormat</em></a>) – Mesh Format Enum (usd, fbx, obj, …). By default: usd</p></li>
+<li><p><strong>material_format</strong> (<a class="reference internal" href="substance_sampler.MaterialExportFormat.html#substance_sampler.MaterialExportFormat" title="substance_sampler.MaterialExportFormat"><em>MaterialExportFormat</em></a>) – Material Format Enum (sbsar, sbs, png, …). By default: sbsar</p></li>
+<li><p><strong>material_type</strong> (<a class="reference internal" href="substance_sampler.MaterialType.html#substance_sampler.MaterialType" title="substance_sampler.MaterialType"><em>MaterialType</em></a>) – The type of material (standard, decal, atlas). By default: standard</p></li>
+<li><p><strong>preset</strong> (<a class="reference internal" href="substance_sampler.Resource.html#substance_sampler.Resource" title="substance_sampler.Resource"><em>Resource</em></a>) – Resource representing export preset. By default: empty preset</p></li>
+<li><p><strong>w_resolution</strong> (<em>int</em>) – Overriden width resolution in pixel for material generation. If not set, use layer output resolution</p></li>
+<li><p><strong>h_resolution</strong> (<em>int</em>) – Overriden height resolution in pixel for material generation. If not set, use layer output resolution</p></li>
+<li><p><strong>channels</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – list of channels. By default: all channels of current workflow</p></li>
+<li><p><strong>physical_ratio</strong> (<em>bool</em>) – Export with physical ratio. False by default. Only used if both w_resolution and h_resolution are set</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – Overwrite if files already exist. True by default</p></li>
+<li><p><strong>controller</strong> (<a class="reference internal" href="substance_sampler.ExportController.html#substance_sampler.ExportController" title="substance_sampler.ExportController"><em>ExportController</em></a>) – Optional export controller. None by default</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Export folder path</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_sampler.Asset.export_environment_light">
+<span class="sig-name descname"><span class="pre">export_environment_light</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">substance_sampler.Asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfolder:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format:</span> <span class="pre">substance_sampler.EnvironmentLightExportFormat</span> <span class="pre">=</span> <span class="pre">&lt;EnvironmentLightExportFormat.exr:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_resolution:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_resolution:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller:</span> <span class="pre">substance_sampler.ExportController</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#substance_sampler.Asset.export_environment_light" title="Link to this definition"></a></dt>
+<dd><p>Export an environment light asset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Export folder path</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name of the exported file(s): By default: name is the Asset’s name</p></li>
+<li><p><strong>subfolder</strong> (<em>bool</em>) – Export in a subfolder. False by default</p></li>
+<li><p><strong>format</strong> (<a class="reference internal" href="substance_sampler.EnvironmentLightExportFormat.html#substance_sampler.EnvironmentLightExportFormat" title="substance_sampler.EnvironmentLightExportFormat"><em>EnvironmentLightExportFormat</em></a>) – Environment light Format Enum (sbsar, sbs, exr). By default: exr</p></li>
+<li><p><strong>w_resolution</strong> (<em>int</em>) – Overriden width resolution in pixel. If not set, use layer output resolution</p></li>
+<li><p><strong>h_resolution</strong> (<em>int</em>) – Overriden height resolution in pixel. If not set, use layer output resolution</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – Overwrite if files already exist. True by default</p></li>
+<li><p><strong>controller</strong> (<a class="reference internal" href="substance_sampler.ExportController.html#substance_sampler.ExportController" title="substance_sampler.ExportController"><em>ExportController</em></a>) – Optional export controller. None by default</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Export folder path</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_sampler.Asset.export_material">
+<span class="sig-name descname"><span class="pre">export_material</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">substance_sampler.Asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfolder:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format:</span> <span class="pre">substance_sampler.MaterialExportFormat</span> <span class="pre">=</span> <span class="pre">&lt;MaterialExportFormat.sbsar:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">material_type:</span> <span class="pre">substance_sampler.MaterialType</span> <span class="pre">=</span> <span class="pre">&lt;MaterialType.standard:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset:</span> <span class="pre">substance_sampler.Resource</span> <span class="pre">=</span> <span class="pre">Resource(</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lifespan=temporary)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_resolution:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_resolution:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channels:</span> <span class="pre">List[str]</span> <span class="pre">=</span> <span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physical_ratio:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller:</span> <span class="pre">substance_sampler.ExportController</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#substance_sampler.Asset.export_material" title="Link to this definition"></a></dt>
+<dd><p>Export asset’s material (either form a material asset or a 3D object asset)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Export folder path</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name of the exported file(s): By default: name is the Asset’s name</p></li>
+<li><p><strong>subfolder</strong> (<em>bool</em>) – Export in a subfolder. False by default</p></li>
+<li><p><strong>format</strong> (<a class="reference internal" href="substance_sampler.MaterialExportFormat.html#substance_sampler.MaterialExportFormat" title="substance_sampler.MaterialExportFormat"><em>MaterialExportFormat</em></a>) – Material Format Enum (sbsar, sbs, png, …). By default: sbsar</p></li>
+<li><p><strong>materialType</strong> (<a class="reference internal" href="substance_sampler.MaterialType.html#substance_sampler.MaterialType" title="substance_sampler.MaterialType"><em>MaterialType</em></a>) – The type of material (standard, decal, atlas). By default: standard</p></li>
+<li><p><strong>preset</strong> (<a class="reference internal" href="substance_sampler.Resource.html#substance_sampler.Resource" title="substance_sampler.Resource"><em>Resource</em></a>) – Resource representing export preset. By default: empty preset</p></li>
+<li><p><strong>w_resolution</strong> (<em>int</em>) – Overriden width resolution in pixel. If not set, use layer output resolution</p></li>
+<li><p><strong>h_resolution</strong> (<em>int</em>) – Overriden height resolution in pixel. If not set, use layer output resolution</p></li>
+<li><p><strong>channels</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – list of channels. By default: all channels of current workflow</p></li>
+<li><p><strong>physical_ratio</strong> (<em>bool</em>) – Export with physical ratio. False by default. Only used if both w_resolution and h_resolution are set</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – Overwrite if files already exist. True by default</p></li>
+<li><p><strong>controller</strong> (<a class="reference internal" href="substance_sampler.ExportController.html#substance_sampler.ExportController" title="substance_sampler.ExportController"><em>ExportController</em></a>) – Optional export controller. None by default</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Export folder path</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_sampler.Asset.export_mesh">
+<span class="sig-name descname"><span class="pre">export_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">substance_sampler.Asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfolder:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format:</span> <span class="pre">substance_sampler.MeshExportFormat</span> <span class="pre">=</span> <span class="pre">&lt;MeshExportFormat.usd:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textures_w_resolution:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textures_h_resolution:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller:</span> <span class="pre">substance_sampler.ExportController</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#substance_sampler.Asset.export_mesh" title="Link to this definition"></a></dt>
+<dd><p>Export mesh part of a 3D object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Export folder path</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name of the exported file(s): By default: name is the Asset’s name</p></li>
+<li><p><strong>subfolder</strong> (<em>bool</em>) – Export in a subfolder. False by default</p></li>
+<li><p><strong>format</strong> (<a class="reference internal" href="substance_sampler.MeshExportFormat.html#substance_sampler.MeshExportFormat" title="substance_sampler.MeshExportFormat"><em>MeshExportFormat</em></a>) – Mesh Format Enum (usd, gltf, obj…). By default: usd</p></li>
+<li><p><strong>textures_w_resolution</strong> (<em>int</em>) – Width resoludtion in pixel for material generation. By default asset’s with resolution</p></li>
+<li><p><strong>textures_h_resolution</strong> (<em>int</em>) – Height resolution in pixel for material generation. By default asset’s with resolution</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – Overwrite if files already exist. True by default</p></li>
+<li><p><strong>controller</strong> (<a class="reference internal" href="substance_sampler.ExportController.html#substance_sampler.ExportController" title="substance_sampler.ExportController"><em>ExportController</em></a>) – Optional export controller. None by default</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Export folder path</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_sampler.Asset.get_layers">
+<span class="sig-name descname"><span class="pre">get_layers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#substance_sampler.Asset" title="substance_sampler.Asset"><span class="pre">substance_sampler.Asset</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer" title="substance_sampler.Layer"><span class="pre">substance_sampler.Layer</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#substance_sampler.Asset.get_layers" title="Link to this definition"></a></dt>
+<dd><p>Get all layers of an asset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of Layer objects</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer" title="substance_sampler.Layer">Layer</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_sampler.Asset.import_images">
+<span class="sig-name descname"><span class="pre">import_images</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">substance_sampler.Asset,</span> <span class="pre">images:</span> <span class="pre">List[str],</span> <span class="pre">position:</span> <span class="pre">int,</span> <span class="pre">import_option:</span> <span class="pre">substance_sampler.ImageImportOption,</span> <span class="pre">use_automatic_physical_size:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False,</span> <span class="pre">physical_size:</span> <span class="pre">Tuple[float,</span> <span class="pre">float,</span> <span class="pre">float]</span> <span class="pre">=</span> <span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0),</span> <span class="pre">resolution_options:</span> <span class="pre">substance_sampler.ImageResolutionOptions</span> <span class="pre">=</span> <span class="pre">&lt;substance_sampler.ImageResolutionOptions</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x00000269343668F0&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#substance_sampler.Asset.import_images" title="Link to this definition"></a></dt>
+<dd><p>Import a list of images in an asset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>images</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – list of image file path</p></li>
+<li><p><strong>position</strong> (<em>int</em>) – position of the imported images in the layer stack</p></li>
+<li><p><strong>import_option</strong> (<a class="reference internal" href="substance_sampler.ImageImportOption.html#substance_sampler.ImageImportOption" title="substance_sampler.ImageImportOption"><em>ImageImportOption</em></a>) – Import Option Enum (ignored if current asset is not empty)</p></li>
+<li><p><strong>use_automatic_physical_size</strong> (<em>bool</em>) – If True, adds physical size to asset and read its value from image metadata. Default: False</p></li>
+<li><p><strong>physical_size</strong> (<em>Tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em>) – Optional physical size for the asset. Will be ignored if use_automatic_physical_size is True</p></li>
+<li><p><strong>resolution_options</strong> (<a class="reference internal" href="substance_sampler.ImageResolutionOptions.html#substance_sampler.ImageResolutionOptions" title="substance_sampler.ImageResolutionOptions"><em>ImageResolutionOptions</em></a>) – Optional options regarding document and images resolution</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Inserted layer</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer" title="substance_sampler.Layer">Layer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_sampler.Asset.import_textures">
+<span class="sig-name descname"><span class="pre">import_textures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">substance_sampler.Asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">images:</span> <span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_automatic_physical_size:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physical_size:</span> <span class="pre">Tuple[float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float]</span> <span class="pre">=</span> <span class="pre">(0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">0.0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution_options:</span> <span class="pre">substance_sampler.ImageResolutionOptions</span> <span class="pre">=</span> <span class="pre">&lt;substance_sampler.ImageResolutionOptions</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x00000269343747B0&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#substance_sampler.Asset.import_textures" title="Link to this definition"></a></dt>
+<dd><p>Import a list of images in an asset, each one with a dedicated usage</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>images</strong> (<em>dict</em><em>[</em><em>str</em><em>,</em><em>str</em><em>]</em>) – dictionnary mapping usage to image path (e.g: {“basecolor”: “/path_to_basecolor.png”, “normal”: “path_to_normal.jpg”})</p></li>
+<li><p><strong>position</strong> (<em>int</em>) – position of the imported images in the layer stack</p></li>
+<li><p><strong>use_automatic_physical_size</strong> (<em>bool</em>) – If True, adds physical size to asset and read its value from image metadata. Default: False</p></li>
+<li><p><strong>physical_size</strong> (<em>Tuple</em><em>[</em><em>float</em><em>,</em><em>float</em><em>,</em><em>float</em><em>]</em>) – Optional physical size for the asset. Will be ignored if use_automatic_physical_size is True</p></li>
+<li><p><strong>resolution_options</strong> (<a class="reference internal" href="substance_sampler.ImageResolutionOptions.html#substance_sampler.ImageResolutionOptions" title="substance_sampler.ImageResolutionOptions"><em>ImageResolutionOptions</em></a>) – Optional options regarding document and images resolution</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Inserted layer</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer" title="substance_sampler.Layer">Layer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_sampler.Asset.insert_filter">
+<span class="sig-name descname"><span class="pre">insert_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#substance_sampler.Asset" title="substance_sampler.Asset"><span class="pre">substance_sampler.Asset</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="substance_sampler.Resource.html#substance_sampler.Resource" title="substance_sampler.Resource"><span class="pre">substance_sampler.Resource</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#substance_sampler.Asset.insert_filter" title="Link to this definition"></a></dt>
+<dd><p>Insert a filter in an asset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter</strong> (<a class="reference internal" href="substance_sampler.Resource.html#substance_sampler.Resource" title="substance_sampler.Resource"><em>Resource</em></a>) – Filter resource to insert</p></li>
+<li><p><strong>position</strong> (<em>int</em>) – position of the filter in the layer stack</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Layer object</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer" title="substance_sampler.Layer">Layer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_sampler.Asset.insert_material">
+<span class="sig-name descname"><span class="pre">insert_material</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#substance_sampler.Asset" title="substance_sampler.Asset"><span class="pre">substance_sampler.Asset</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">material</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="substance_sampler.Resource.html#substance_sampler.Resource" title="substance_sampler.Resource"><span class="pre">substance_sampler.Resource</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="substance_sampler.BlendMode.html#substance_sampler.BlendMode" title="substance_sampler.BlendMode"><span class="pre">substance_sampler.BlendMode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#substance_sampler.Asset.insert_material" title="Link to this definition"></a></dt>
+<dd><p>Insert a material in an asset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>material</strong> (<a class="reference internal" href="substance_sampler.Resource.html#substance_sampler.Resource" title="substance_sampler.Resource"><em>Resource</em></a>) – Material resource to insert</p></li>
+<li><p><strong>position</strong> (<em>int</em>) – position of the material in the layer stack</p></li>
+<li><p><strong>blend_mode</strong> (<a class="reference internal" href="substance_sampler.BlendMode.html#substance_sampler.BlendMode" title="substance_sampler.BlendMode"><em>BlendMode</em></a>) – Blend mode selection</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Inserted Layer</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="substance_sampler.Layer.html#substance_sampler.Layer" title="substance_sampler.Layer">Layer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="substance_sampler.Asset.metadata">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metadata</span></span><a class="headerlink" href="#substance_sampler.Asset.metadata" title="Link to this definition"></a></dt>
+<dd><p>Asset’s Metadata</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Returns Asset’s metadata</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="substance_sampler.Metadata.html#substance_sampler.Metadata" title="substance_sampler.Metadata">Metadata</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="substance_sampler.Asset.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#substance_sampler.Asset.name" title="Link to this definition"></a></dt>
+<dd><p>Assets name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Returns Asset’s name</p>
+</dd>
+<dt class="field-even">Setter<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sets Asset’s name</p>
+</dd>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_sampler.Asset.remove_layer">
+<span class="sig-name descname"><span class="pre">remove_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#substance_sampler.Asset" title="substance_sampler.Asset"><span class="pre">substance_sampler.Asset</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_sampler.Asset.remove_layer" title="Link to this definition"></a></dt>
+<dd><p>Remove a layer from an asset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>layerIndex</strong> (<em>int</em>) – Index of layer to remove</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="substance_sampler.Asset.resource">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resource</span></span><a class="headerlink" href="#substance_sampler.Asset.resource" title="Link to this definition"></a></dt>
+<dd><p>A Resource referencing current asset.
+Note: The value of this property may change when asset is modified. It is recommended to get it each time it is needed,
+rather than storing it in a variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Returns a resource referencing current asset</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="substance_sampler.Resource.html#substance_sampler.Resource" title="substance_sampler.Resource">Resource</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="substance_sampler.Asset.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#substance_sampler.Asset.type" title="Link to this definition"></a></dt>
+<dd><p>Asset’s type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Returns Asset type</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="substance_sampler.AssetType.html#substance_sampler.AssetType" title="substance_sampler.AssetType">AssetType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="substance_sampler.ImageResolutionOptions.html" class="btn btn-neutral float-left" title="substance_sampler.ImageResolutionOptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="substance_sampler.Layer.html" class="btn btn-neutral float-right" title="substance_sampler.Layer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Adobe.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

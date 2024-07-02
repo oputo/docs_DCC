@@ -1,0 +1,6 @@
+﻿substance\_sampler.wait\_for\_computation
+=========================================
+
+.. currentmodule:: substance_sampler
+
+.. autofunction:: wait_for_computation

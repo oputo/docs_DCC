@@ -1,0 +1,67 @@
+substance_sampler
+-----------------
+
+.. currentmodule:: substance_sampler
+
+Functions
+---------
+.. autosummary::
+    :toctree: _generate
+
+    create_project
+    save_project
+    save_project_as
+    open_project
+    get_project_path
+    get_project_assets
+    get_selected_asset
+    create_asset
+    delete_asset
+    get_filters
+    get_materials
+    get_texture_generators
+    get_export_presets
+    run_in_main_thread
+    create_3d_capture
+    wait_for_computation
+    clear_render_cache
+
+Classes 
+-------
+.. autosummary::
+    :toctree: _generate
+
+    ImageResolutionOptions
+    Asset
+    Layer
+    Parameter
+    Metadata
+    Resource
+    ExportController
+    Capture_3d
+    DatasetInfo
+    CameraInformation
+    Usage
+
+Enumerations
+------------
+.. autosummary::
+    :toctree: _generate
+
+    Type
+    Widget
+    LayerType
+    ExportFormat
+    MaterialExportFormat
+    EnvironmentLightExportFormat
+    MeshExportFormat
+    MaterialType
+    ImageImportOption
+    BlendMode
+    AssetType
+    WaitStatus
+    Capture3dState
+    Capture3dPrecision
+    Capture3dOrdering
+    Capture3dReconstructionDetails
+    ImageImportResolutionPolicy

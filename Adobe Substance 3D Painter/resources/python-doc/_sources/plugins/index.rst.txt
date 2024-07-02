@@ -1,0 +1,41 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2010-2020 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+Writing plugins
+===============
+
+The `Substance 3D Painter` Python API allows users to write their own plugins, to
+do certain tasks. A `Substance 3D Painter` plugin is a standard Python module,
+placed in a path added to :obj:`substance_painter_plugins.path`.
+
+Plugins can be loaded or unloaded with the :mod:`substance_painter_plugins`
+module.
+
+.. toctree::
+   :maxdepth: 4
+
+   substance_painter_plugins
+
+
+Examples of plugins
+-------------------
+
+Here are some simple examples showing how to write a `Substance 3D Painter` plugin
+in Python:
+
+.. toctree::
+   :maxdepth: 4
+
+   hello_plugin
+   versioning_plugin

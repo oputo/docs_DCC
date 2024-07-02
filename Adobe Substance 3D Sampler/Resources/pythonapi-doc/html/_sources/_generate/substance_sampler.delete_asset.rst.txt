@@ -1,0 +1,6 @@
+﻿substance\_sampler.delete\_asset
+================================
+
+.. currentmodule:: substance_sampler
+
+.. autofunction:: delete_asset

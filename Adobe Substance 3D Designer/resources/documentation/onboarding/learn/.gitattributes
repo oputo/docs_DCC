@@ -1,0 +1,4 @@
+# Auto-detect text files and force unix line endings
+# Note that is rare cases, git can misinterpret binary files for text files,
+# in which case they should be explicitely marked as binary in this file.
+* text=auto eol=lf

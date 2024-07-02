@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- AlgDialog.qml -->
+  <title>AlgDialog QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgDialog QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgDialog-brief -->
+<p>A dialog with Substance 3D Painter style. <a href="#details">More...</a></p>
+<!-- @@@AlgDialog -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-algwidgets-algwindow.html" translate="no">AlgWindow</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-algdialog-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algdialog.html#contentItem-prop" translate="no">contentItem</a></b></b> : Component</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algdialog.html#defaultButtonText-prop" translate="no">defaultButtonText</a></b></b> : string</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algdialog.html#accepted-signal" translate="no">accepted</a></b></b>()</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algdialog.html#accept-method" translate="no">accept</a></b></b>()</li>
+</ul>
+<!-- $$$AlgDialog-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>A dialog with Substance 3D Painter style. This class is part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<p>This dialog allows users to press <i translate="no">escape</i> to be closed and <i translate="no">enter</i> to accept its purpose.</p>
+<pre class="qml" translate="no">import AlgWidgets 2.0
+import QtQuick 2.7
+
+<span class="type"><a href="qml-algwidgets-algdialog.html" translate="no">AlgDialog</a></span> {
+  <span class="name">id</span>: <span class="name">root</span>
+  <span class="name">width</span>: <span class="number">100</span>
+  <span class="name">height</span>: <span class="number">100</span>
+  <span class="name">x</span>: <span class="number">50</span>
+  <span class="name">y</span>: <span class="number">50</span>
+  <span class="name">visible</span>: <span class="number">true</span>
+  <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-rectangle.html" translate="no">Rectangle</a></span> {
+    <span class="name">anchors</span>.fill: <span class="name">parent</span>
+    <span class="name">color</span>: <span class="string">&quot;red&quot;</span>
+  }
+}</pre>
+<!-- @@@AlgDialog -->
+<h2>Property Documentation</h2>
+<!-- $$$contentItem -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="contentItem-prop">
+<td class="tblQmlPropNode"><p>
+<a name="contentItem-prop"></a><span class="name">contentItem</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtqml-component.html" translate="no">Component</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Area of the dialog that can be fully used to draw content.</p>
+<p>Usage example:</p>
+<pre class="qml" translate="no"><span class="type"><a href="qml-algwidgets-algdialog.html" translate="no">AlgDialog</a></span> {
+  <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-rectangle.html" translate="no">Rectangle</a></span> {
+    <span class="name">parent</span>: <span class="name">contentItem</span>
+    <span class="name">anchors</span>.fill: <span class="name">parent</span>
+    <span class="name">color</span>: <span class="string">&quot;green&quot;</span>
+  }
+}</pre>
+</div></div><!-- @@@contentItem -->
+<br/>
+<!-- $$$defaultButtonText -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="defaultButtonText-prop">
+<td class="tblQmlPropNode"><p>
+<a name="defaultButtonText-prop"></a><span class="name">defaultButtonText</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-string.html" translate="no">string</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Text used to fill the default button.</p>
+<p>By default, <i translate="no">defaultButtonText</i> is set to &quot;Save&quot;.</p>
+</div></div><!-- @@@defaultButtonText -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$accepted[overload1]$$$accepted -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="accepted-signal">
+<td class="tblQmlFuncNode"><p>
+<a name="accepted-signal"></a><span class="name">accepted</span>()</p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Signal emitted when the user has clicked on the default button.</p>
+<p><b>Note: </b>The corresponding handler is <code translate="no">onAccepted</code>.</p>
+</div></div><!-- @@@accepted -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$accept[overload1]$$$accept -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="accept-method">
+<td class="tblQmlFuncNode"><p>
+<a name="accept-method"></a><span class="name">accept</span>()</p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Force the dialog to accept its purpose and to be closed.</p>
+</div></div><!-- @@@accept -->
+<br/>
+</body>
+</html>

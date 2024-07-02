@@ -1,0 +1,30 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2022 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+Welcome to Adobe Substance 3D Sampler Scripting documentation
+=============================================================
+
+The `Substance 3D Sampler` Python API allows users to write their plugins and scripts to automate their workflow and customize their interface to integrate efficiently Sampler in their pipeline.
+
+A `Substance 3D Sampler` script is a standard Python module imported in application through Preferences window.
+
+A `Substance 3D Sampler` plugin contains both scripting and UI elements, described in QML, and packed into a zip archive.
+
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+   substance_sampler

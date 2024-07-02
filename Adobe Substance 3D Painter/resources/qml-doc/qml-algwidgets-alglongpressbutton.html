@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- AlgLongPressButton.qml -->
+  <title>AlgLongPressButton QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgLongPressButton QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgLongPressButton-brief -->
+<p>A long press button with Substance 3D Painter style. <a href="#details">More...</a></p>
+<!-- @@@AlgLongPressButton -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-algwidgets-algtoolbutton.html" translate="no">AlgToolButton</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-alglongpressbutton-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-alglongpressbutton.html#interval-prop" translate="no">interval</a></b></b> : int</li>
+</ul>
+<!-- $$$AlgLongPressButton-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>A long press button with Substance 3D Painter style. This class is part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<p>When pressing the button without releasing it, a clicked event is sent periodically.</p>
+<pre class="qml" translate="no">import AlgWidgets 2.0
+
+<span class="type"><a href="qml-algwidgets-alglongpressbutton.html" translate="no">AlgLongPressButton</a></span> {
+  <span class="name">id</span>: <span class="name">root</span>
+  <span class="name">text</span>: <span class="string">&quot;AlgLongPressButton&quot;</span>
+  <span class="name">iconName</span>: <span class="string">&quot;icon_path&quot;</span> <span class="comment">// You can use a relative or absolute path here</span>
+  <span class="name">onClicked</span>: {
+    <span class="name">alg</span>.<span class="name">log</span>.<span class="name">warn</span>(<span class="string">&quot;clicked&quot;</span>)
+  }
+}</pre>
+<!-- @@@AlgLongPressButton -->
+<h2>Property Documentation</h2>
+<!-- $$$interval -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="interval-prop">
+<td class="tblQmlPropNode"><p>
+<a name="interval-prop"></a><span class="name">interval</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-int.html" translate="no">int</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>The interval between each event are sent in milliseconds.</p>
+<p>By default, <i translate="no">interval</i> is set to 100.</p>
+</div></div><!-- @@@interval -->
+<br/>
+</body>
+</html>

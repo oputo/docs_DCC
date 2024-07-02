@@ -1,0 +1,6 @@
+﻿substance\_sampler.get\_project\_assets
+=======================================
+
+.. currentmodule:: substance_sampler
+
+.. autofunction:: get_project_assets

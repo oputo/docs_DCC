@@ -1,0 +1,32 @@
+﻿substance\_sampler.Layer
+========================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: Layer
+   :members:
+
+   .. automethod:: __init__
+
+
+   .. rubric:: Methods
+
+   .. autosummary::
+
+      ~Layer.__init__
+      ~Layer.apply_preset
+      ~Layer.reset_default_values
+
+   .. rubric:: Attributes
+
+   .. autosummary::
+
+      ~Layer.blend_mode
+      ~Layer.blend_parameters
+      ~Layer.name
+      ~Layer.output_usages
+      ~Layer.position
+      ~Layer.presets
+      ~Layer.parameters
+      ~Layer.type
+

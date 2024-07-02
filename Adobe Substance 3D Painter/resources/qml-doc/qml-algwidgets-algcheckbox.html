@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- AlgCheckBox.qml -->
+  <title>AlgCheckBox QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgCheckBox QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgCheckBox-brief -->
+<p>A check box with Substance 3D Painter style. <a href="#details">More...</a></p>
+<!-- @@@AlgCheckBox -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html" translate="no">CheckBox</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-algcheckbox-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algcheckbox.html#elide-prop" translate="no">elide</a></b></b> : enumeration</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algcheckbox.html#position-prop" translate="no">position</a></b></b> : var</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algcheckbox.html#textPosition-prop" translate="no">textPosition</a></b></b> : var</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algcheckbox.html#tooltip-prop" translate="no">tooltip</a></b></b> : string</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algcheckbox.html#wrapMode-prop" translate="no">wrapMode</a></b></b> : enumeration</li>
+</ul>
+<!-- $$$AlgCheckBox-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>A check box with Substance 3D Painter style. This class is part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<pre class="qml" translate="no">import AlgWidgets 2.0
+
+<span class="type"><a href="qml-algwidgets-algcheckbox.html" translate="no">AlgCheckBox</a></span> {
+  <span class="name">id</span>: <span class="name">root</span>
+  <span class="name">text</span>: <span class="string">&quot;AlgCheckBox&quot;</span>
+  <span class="name">onCheckedChanged</span>: {
+    <span class="name">alg</span>.<span class="name">log</span>.<span class="name">warn</span>(<span class="string">&quot;checked: &quot;</span> <span class="operator">+</span> <span class="name">checked</span>)
+  }
+}</pre>
+<!-- @@@AlgCheckBox -->
+<h2>Property Documentation</h2>
+<!-- $$$elide -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="elide-prop">
+<td class="tblQmlPropNode"><p>
+<a name="elide-prop"></a><span class="name">elide</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-enumeration.html" translate="no">enumeration</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>See <a href="http://doc.qt.io/qt-5/qml-qtquick-text.html#elide-prop" translate="no">Text::elide</a> for more informations.</p>
+<p>By default, <i translate="no">elide</i> is set to Text.ElideNone.</p>
+</div></div><!-- @@@elide -->
+<br/>
+<!-- $$$position -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="position-prop">
+<td class="tblQmlPropNode"><p>
+<a name="position-prop"></a><span class="qmlreadonly">[read-only] </span><span class="name">position</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html" translate="no">var</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Enumeration of the possible positions of the checkbox text.</p>
+<div class="table"><table class="generic">
+ <tr valign="top" class="odd"><td ><i translate="no">position.Left</i></td><td >The text will be displayed in the left of the checkbox.</td></tr>
+<tr valign="top" class="even"><td ><i translate="no">position.Right</i></td><td >The text will be displayed in the right of the checkbox.</td></tr>
+</table></div>
+</div></div><!-- @@@position -->
+<br/>
+<!-- $$$textPosition -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="textPosition-prop">
+<td class="tblQmlPropNode"><p>
+<a name="textPosition-prop"></a><span class="name">textPosition</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html" translate="no">var</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>This property holds the position of the checkbox text.</p>
+<p>By default, <i translate="no">textPosition</i> is set to <i translate="no">position.Right</i>.</p>
+</div></div><!-- @@@textPosition -->
+<br/>
+<!-- $$$tooltip -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="tooltip-prop">
+<td class="tblQmlPropNode"><p>
+<a name="tooltip-prop"></a><span class="name">tooltip</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-string.html" translate="no">string</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Tooltip text associated with the checkbox.</p>
+</div></div><!-- @@@tooltip -->
+<br/>
+<!-- $$$wrapMode -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="wrapMode-prop">
+<td class="tblQmlPropNode"><p>
+<a name="wrapMode-prop"></a><span class="name">wrapMode</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-enumeration.html" translate="no">enumeration</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>See <a href="http://doc.qt.io/qt-5/qml-qtquick-text.html#wrapMode-prop" translate="no">Text::wrapMode</a> for more informations.</p>
+<p>By default, <i translate="no">wrapMode</i> is set to Text.WordWrap.</p>
+</div></div><!-- @@@wrapMode -->
+<br/>
+</body>
+</html>

@@ -1,0 +1,6 @@
+﻿substance\_sampler.BlendMode
+============================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: BlendMode

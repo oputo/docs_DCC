@@ -1,0 +1,26 @@
+﻿substance\_sampler.ImageResolutionOptions
+====================================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: ImageResolutionOptions
+   :members:
+
+   .. automethod:: __init__
+
+
+   .. rubric:: Methods
+
+   .. autosummary::
+
+      ~ImageResolutionOptions.__init__
+
+   .. rubric:: Attributes
+
+   .. autosummary::
+
+      ~ImageResolutionOptions.add_crop
+      ~ImageResolutionOptions.upscale
+      ~ImageResolutionOptions.policy
+      ~ImageResolutionOptions.document_resolution
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- AlgHelpers.qml -->
+  <title>AlgHelpers QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgHelpers QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgHelpers-brief -->
+<p>A set of functions to help use Alg functionnalities. <a href="#details">More...</a></p>
+<!-- @@@AlgHelpers -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtqml-qtobject.html" translate="no">QtObject</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-alghelpers-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-alghelpers.html#boundingBox-prop" translate="no">boundingBox</a></b></b> : QtObject</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-alghelpers.html#color-prop" translate="no">color</a></b></b> : QtObject</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-alghelpers.html#dynamicWidget-prop" translate="no">dynamicWidget</a></b></b> : QtObject</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-alghelpers.html#object-prop" translate="no">object</a></b></b> : QtObject</li>
+</ul>
+<!-- $$$AlgHelpers-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>A set of functions to help use Alg functionnalities. These functions are part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<!-- @@@AlgHelpers -->
+<h2>Property Documentation</h2>
+<!-- $$$boundingBox -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="boundingBox-prop">
+<td class="tblQmlPropNode"><p>
+<a name="boundingBox-prop"></a><span class="qmlreadonly">[read-only] </span><span class="name">boundingBox</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtqml-qtobject.html" translate="no">QtObject</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>A set of functions to help managing bounding boxes.</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Function prototype</th><th >Brief description</th></tr></thead>
+<tr valign="top" class="odd"><td ><code translate="no"><b>function</b> scaleSize(availableSize, sizeNeeded)</code></td><td ><code translate="no">Returns the optimal size of the input size <i translate="no">sizeNeeded</i> in the size <i translate="no">availableSize</i>.</code></td></tr>
+</table></div>
+</div></div><!-- @@@boundingBox -->
+<br/>
+<!-- $$$color -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="color-prop">
+<td class="tblQmlPropNode"><p>
+<a name="color-prop"></a><span class="qmlreadonly">[read-only] </span><span class="name">color</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtqml-qtobject.html" translate="no">QtObject</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>A set of functions to help managing colors.</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Function prototype</th><th >Brief description</th></tr></thead>
+<tr valign="top" class="odd"><td ><code translate="no"><b>function</b> linearTosRGB(value)</code></td><td >Transform a channel value from linear to sRGB.</td></tr>
+<tr valign="top" class="even"><td ><code translate="no"><b>function</b> linearColorTosRGB(color)</code></td><td >Transform a <i translate="no">color</i> from linear to sRGB.</td></tr>
+<tr valign="top" class="odd"><td ><code translate="no"><b>function</b> sRGBToLinear(value)</code></td><td >Transform a channel value from sRGB to linear.</td></tr>
+<tr valign="top" class="even"><td ><code translate="no"><b>function</b> sRGBColorToLinear(color)</code></td><td >Transform a <i translate="no">color</i> from sRGB to linear.</td></tr>
+</table></div>
+</div></div><!-- @@@color -->
+<br/>
+<!-- $$$dynamicWidget -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="dynamicWidget-prop">
+<td class="tblQmlPropNode"><p>
+<a name="dynamicWidget-prop"></a><span class="qmlreadonly">[read-only] </span><span class="name">dynamicWidget</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtqml-qtobject.html" translate="no">QtObject</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>A set of functions to help managing dynamic widgets.</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Function prototype</th><th >Brief description</th></tr></thead>
+<tr valign="top" class="odd"><td ><code translate="no"><b>function</b> addImportPath(importPath)</code></td><td >Add a path to the user defined import path list.</td></tr>
+<tr valign="top" class="even"><td ><code translate="no"><b>function</b> removeImportPath(importPath)</code></td><td >Remove a path from the user defined import path list.</td></tr>
+<tr valign="top" class="odd"><td ><code translate="no"><b>function</b> createWidget(widgetType, parent)</code></td><td >Create a dynamic component.<ul>
+<li><b>widgetType</b>: string holding the type of the widget that will be created.</li>
+<li><b>parent</b>: parent of the dynamic widget that will be created.</li>
+</ul>
+<p>In order to use custom widgets, it is necessary to specify the import path when calling this function. A signal - <i translate="no">importPathRequired</i> - is emitted each time the function is called. It is possible to use this signal to update the import path list:</p>
+<pre class="qml" translate="no"><span class="type"><a href="http://doc.qt.io/qt-5/qml-qtqml-connections.html" translate="no">Connections</a></span> {
+  <span class="name">target</span>: <span class="name">AlgHelpers</span>.<span class="name">dynamicWidget</span>
+  <span class="name">onImportPathRequired</span>: {
+    <span class="name">AlgHelpers</span>.<span class="name">dynamicWidget</span>.<span class="name">addImportPath</span>(<span class="name">Qt</span>.<span class="name">resolvedUrl</span>(<span class="string">&quot;.&quot;</span>))
+  }
+}</pre>
+<p>Since the import path list is saved under this singleton, the update may be performed only once.</p>
+</td></tr>
+</table></div>
+</div></div><!-- @@@dynamicWidget -->
+<br/>
+<!-- $$$object -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="object-prop">
+<td class="tblQmlPropNode"><p>
+<a name="object-prop"></a><span class="qmlreadonly">[read-only] </span><span class="name">object</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtqml-qtobject.html" translate="no">QtObject</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>A set of functions to help managing javascript objects.</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Function prototype</th><th >Brief description</th></tr></thead>
+<tr valign="top" class="odd"><td ><code translate="no"><b>function</b> isArray(obj)</code></td><td >Returns true if the parameter is an array.</td></tr>
+</table></div>
+</div></div><!-- @@@object -->
+<br/>
+</body>
+</html>

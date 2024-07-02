@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- AlgTabBar.qml -->
+  <title>AlgTabBar QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgTabBar QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgTabBar-brief -->
+<p>A tab bar with Substance 3D Painter style. <a href="#details">More...</a></p>
+<!-- @@@AlgTabBar -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-controls2-tabbar.html" translate="no">TabBar</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-algtabbar-members.html">List of all members, including inherited members</a></li>
+</ul>
+<!-- $$$AlgTabBar-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>A tab bar with Substance 3D Painter style. This class is part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<pre class="qml" translate="no">import AlgWidgets 2.0
+import QtQuick 2.7
+import QtQuick.Layouts 1.3
+
+<span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-layouts-columnlayout.html" translate="no">ColumnLayout</a></span> {
+  <span class="type"><a href="qml-algwidgets-algtabbar.html" translate="no">AlgTabBar</a></span> {
+    <span class="name">id</span>: <span class="name">root</span>
+    <span class="name">Layout</span>.preferredWidth: <span class="number">100</span>
+    <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-repeater.html" translate="no">Repeater</a></span> {
+      <span class="name">model</span>: <span class="number">4</span>
+      <span class="name">delegate</span>: <span class="name">AlgTabButton</span> {
+        <span class="name">text</span>: <span class="name">index</span>
+        <span class="name">onClicked</span>: {
+          <span class="name">alg</span>.<span class="name">log</span>.<span class="name">warn</span>(<span class="name">text</span> <span class="operator">+</span> <span class="string">&quot; clicked&quot;</span>)
+        }
+      }
+    }
+  }
+}</pre>
+<!-- @@@AlgTabBar -->
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- AlgButton.qml -->
+  <title>AlgButton QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgButton QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgButton-brief -->
+<p>A push button with Substance 3D Painter style. <a href="#details">More...</a></p>
+<!-- @@@AlgButton -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-controls2-button.html" translate="no">Button</a></p>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qml-algwidgets-algcolorbutton.html" translate="no">AlgColorButton</a>, <a href="qml-algwidgets-algresourcewidget.html" translate="no">AlgResourceWidget</a>, and <a href="qml-algwidgets-algtoolbutton.html" translate="no">AlgToolButton</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-algbutton-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algbutton.html#elide-prop" translate="no">elide</a></b></b> : enumeration</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algbutton.html#iconName-prop" translate="no">iconName</a></b></b> : string</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algbutton.html#iconSize-prop" translate="no">iconSize</a></b></b> : size</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algbutton.html#textAlignment-prop" translate="no">textAlignment</a></b></b> : enumeration</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algbutton.html#tooltip-prop" translate="no">tooltip</a></b></b> : string</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algbutton.html#wrapMode-prop" translate="no">wrapMode</a></b></b> : enumeration</li>
+</ul>
+<!-- $$$AlgButton-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>A push button with Substance 3D Painter style. This class is part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<pre class="qml" translate="no">import AlgWidgets 2.0
+
+<span class="type"><a href="qml-algwidgets-algbutton.html" translate="no">AlgButton</a></span> {
+  <span class="name">id</span>: <span class="name">root</span>
+  <span class="name">text</span>: <span class="string">&quot;AlgButton&quot;</span>
+  <span class="name">onClicked</span>: {
+    <span class="name">alg</span>.<span class="name">log</span>.<span class="name">warn</span>(<span class="string">&quot;clicked&quot;</span>)
+  }
+}</pre>
+<!-- @@@AlgButton -->
+<h2>Property Documentation</h2>
+<!-- $$$elide -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="elide-prop">
+<td class="tblQmlPropNode"><p>
+<a name="elide-prop"></a><span class="name">elide</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-enumeration.html" translate="no">enumeration</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>See <a href="http://doc.qt.io/qt-5/qml-qtquick-text.html#elide-prop" translate="no">Text::elide</a> for more informations.</p>
+<p>By default, <i translate="no">elide</i> is set to Text.ElideNone.</p>
+</div></div><!-- @@@elide -->
+<br/>
+<!-- $$$iconName -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="iconName-prop">
+<td class="tblQmlPropNode"><p>
+<a name="iconName-prop"></a><span class="name">iconName</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-string.html" translate="no">string</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Path to the optional icon to display</p>
+<p>By default, <i translate="no">iconName</i> is empty.</p>
+</div></div><!-- @@@iconName -->
+<br/>
+<!-- $$$iconSize -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="iconSize-prop">
+<td class="tblQmlPropNode"><p>
+<a name="iconSize-prop"></a><span class="name">iconSize</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-size.html" translate="no">size</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Size of the optional icon to display</p>
+<p>By default, <i translate="no">iconSize</i> is undefined and a default squared will be used.</p>
+</div></div><!-- @@@iconSize -->
+<br/>
+<!-- $$$textAlignment -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="textAlignment-prop">
+<td class="tblQmlPropNode"><p>
+<a name="textAlignment-prop"></a><span class="name">textAlignment</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-enumeration.html" translate="no">enumeration</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Allow to change the text alignment inside the button. See <a href="http://doc.qt.io/qt-5/qml-qtquick-text.html#horizontalAlignment-prop" translate="no">Text::horizontalAlignment</a> for more informations.</p>
+<p>By default, <i translate="no">textAlignment</i> is set to Text.AlignHCenter.</p>
+</div></div><!-- @@@textAlignment -->
+<br/>
+<!-- $$$tooltip -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="tooltip-prop">
+<td class="tblQmlPropNode"><p>
+<a name="tooltip-prop"></a><span class="name">tooltip</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-string.html" translate="no">string</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Tooltip text associated with the button.</p>
+</div></div><!-- @@@tooltip -->
+<br/>
+<!-- $$$wrapMode -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="wrapMode-prop">
+<td class="tblQmlPropNode"><p>
+<a name="wrapMode-prop"></a><span class="name">wrapMode</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-enumeration.html" translate="no">enumeration</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>See <a href="http://doc.qt.io/qt-5/qml-qtquick-text.html#wrapMode-prop" translate="no">Text::wrapMode</a> for more informations.</p>
+<p>By default, <i translate="no">wrapMode</i> is set to Text.WordWrap.</p>
+</div></div><!-- @@@wrapMode -->
+<br/>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- AlgColorButton.qml -->
+  <title>AlgColorButton QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgColorButton QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgColorButton-brief -->
+<p>A widget used to set an RGB color. <a href="#details">More...</a></p>
+<!-- @@@AlgColorButton -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-algwidgets-algbutton.html" translate="no">AlgButton</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-algcolorbutton-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algcolorbutton.html#arrayColor-prop" translate="no">arrayColor</a></b></b> : var</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algcolorbutton.html#color-prop" translate="no">color</a></b></b> : color</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algcolorbutton.html#isEdited-prop" translate="no">isEdited</a></b></b> : bool</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algcolorbutton.html#linearMode-prop" translate="no">linearMode</a></b></b> : bool</li>
+</ul>
+<!-- $$$AlgColorButton-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>A widget used to set an RGB color. This widget is part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<p>When clicking on the <a href="qml-algwidgets-algcolorbutton.html" translate="no">AlgColorButton</a>, a popup will appear with the Substance 3D Painter default color picker. It is possible to switch between linear and sRGB mode.</p>
+<pre class="qml" translate="no">import AlgWidgets 2.0
+
+<span class="type"><a href="qml-algwidgets-algcolorbutton.html" translate="no">AlgColorButton</a></span> {
+  <span class="name">id</span>: <span class="name">root</span>
+  <span class="name">color</span>: <span class="string">&quot;magenta&quot;</span>
+}</pre>
+<!-- @@@AlgColorButton -->
+<h2>Property Documentation</h2>
+<!-- $$$arrayColor -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="arrayColor-prop">
+<td class="tblQmlPropNode"><p>
+<a name="arrayColor-prop"></a><span class="name">arrayColor</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html" translate="no">var</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Actual RGB color that the widget refers to as an array of 3 reals.</p>
+<p>It is possible to use this property to set the color:</p>
+<pre class="qml" translate="no"><span class="type"><a href="qml-algwidgets-algcolorbutton.html" translate="no">AlgColorButton</a></span> {
+  <span class="name">arrayColor</span>: [<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.5</span>]
+}</pre>
+<p>By default, <i translate="no">arrayColor</i> is set to [0, 0, 0].</p>
+</div></div><!-- @@@arrayColor -->
+<br/>
+<!-- $$$color -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="color-prop">
+<td class="tblQmlPropNode"><p>
+<a name="color-prop"></a><span class="name">color</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-color.html" translate="no">color</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Actual RGB color that the widget refers to.</p>
+<p>By default, <i translate="no">color</i> is set to #000.</p>
+</div></div><!-- @@@color -->
+<br/>
+<!-- $$$isEdited -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="isEdited-prop">
+<td class="tblQmlPropNode"><p>
+<a name="isEdited-prop"></a><span class="qmlreadonly">[read-only] </span><span class="name">isEdited</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-bool.html" translate="no">bool</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>The state of the widget: if the color picker dialog is opened, <i translate="no">isEdited</i> will be true.</p>
+</div></div><!-- @@@isEdited -->
+<br/>
+<!-- $$$linearMode -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="linearMode-prop">
+<td class="tblQmlPropNode"><p>
+<a name="linearMode-prop"></a><span class="name">linearMode</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-bool.html" translate="no">bool</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Determines if the color must be in linear mode or in sRGB mode.</p>
+<p>By default, <i translate="no">linearMode</i> is set to true.</p>
+</div></div><!-- @@@linearMode -->
+<br/>
+</body>
+</html>

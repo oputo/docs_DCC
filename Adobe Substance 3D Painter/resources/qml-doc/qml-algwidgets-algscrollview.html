@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- AlgScrollView.qml -->
+  <title>AlgScrollView QML Type | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title" translate="no">AlgScrollView QML Type</h1>
+<span class="subtitle" translate="no"></span>
+<!-- $$$AlgScrollView-brief -->
+<p>A scroll view with Substance 3D Painter style. <a href="#details">More...</a></p>
+<!-- @@@AlgScrollView -->
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import AlgWidgets 2.0</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-flickable.html" translate="no">Flickable</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-algwidgets-algscrollview-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algscrollview.html#children-prop" translate="no">children</a></b></b> : List&lt;Item&gt;</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algscrollview.html#viewportColor-prop" translate="no">viewportColor</a></b></b> : color</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algscrollview.html#viewportHeight-prop" translate="no">viewportHeight</a></b></b> : real</li>
+<li class="fn" translate="no"><b><b><a href="qml-algwidgets-algscrollview.html#viewportWidth-prop" translate="no">viewportWidth</a></b></b> : real</li>
+</ul>
+<!-- $$$AlgScrollView-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+<p>A scroll view with Substance 3D Painter style. This class is part of the <a href="algwidgets-qmlmodule.html" translate="no">AlgWidgets</a> module.</p>
+<pre class="qml" translate="no">import AlgWidgets 2.0
+import QtQuick 2.7
+
+<span class="type"><a href="qml-algwidgets-algscrollview.html" translate="no">AlgScrollView</a></span> {
+  <span class="name">id</span>: <span class="name">root</span>
+  <span class="name">width</span>: <span class="number">125</span>
+  <span class="name">height</span>: <span class="number">200</span>
+  <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-column.html" translate="no">Column</a></span> {
+    <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-repeater.html" translate="no">Repeater</a></span> {
+      <span class="name">model</span>: <span class="number">30</span>
+      <span class="name">delegate</span>: <span class="name">AlgLabel</span> {
+        <span class="name">text</span>: <span class="string">&quot;Item at index: &quot;</span> <span class="operator">+</span> <span class="name">index</span>
+      }
+    }
+  }
+}</pre>
+<!-- @@@AlgScrollView -->
+<h2>Property Documentation</h2>
+<!-- $$$children -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="children-prop">
+<td class="tblQmlPropNode"><p>
+<a name="children-prop"></a><span class="qmldefault">[default] </span><span class="name">children</span> : <span class="type">List</span>&lt;<span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html" translate="no">Item</a></span>&gt;</p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>Children of the <a href="qml-algwidgets-algscrollview.html" translate="no">AlgScrollView</a>.</p>
+<p>By default, <i translate="no">children</i> are empty.</p>
+</div></div><!-- @@@children -->
+<br/>
+<!-- $$$viewportColor -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="viewportColor-prop">
+<td class="tblQmlPropNode"><p>
+<a name="viewportColor-prop"></a><span class="name">viewportColor</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-color.html" translate="no">color</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>This property holds the color of the viewport.</p>
+<p>By default, <i translate="no">viewportColor</i> is transparent.</p>
+</div></div><!-- @@@viewportColor -->
+<br/>
+<!-- $$$viewportHeight -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="viewportHeight-prop">
+<td class="tblQmlPropNode"><p>
+<a name="viewportHeight-prop"></a><span class="qmlreadonly">[read-only] </span><span class="name">viewportHeight</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-real.html" translate="no">real</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>This property holds the height of the viewport.</p>
+</div></div><!-- @@@viewportHeight -->
+<br/>
+<!-- $$$viewportWidth -->
+<div class="qmlitem"><div class="qmlproto" translate="no">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="viewportWidth-prop">
+<td class="tblQmlPropNode"><p>
+<a name="viewportWidth-prop"></a><span class="qmlreadonly">[read-only] </span><span class="name">viewportWidth</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-real.html" translate="no">real</a></span></p></td></tr>
+</table></div></div>
+<div class="qmldoc"><p>This property holds the width of the viewport.</p>
+</div></div><!-- @@@viewportWidth -->
+<br/>
+</body>
+</html>

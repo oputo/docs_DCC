@@ -1,0 +1,29 @@
+﻿substance\_sampler.Capture\_3d
+==============================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: Capture_3d
+   :members:
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Capture_3d.import_folder
+      ~Capture_3d.import_images
+      ~Capture_3d.align
+      ~Capture_3d.export_point_cloud
+      ~Capture_3d.get_point_cloud
+      ~Capture_3d.reconstruct_from_folder
+      ~Capture_3d.reconstruct_mesh
+      ~Capture_3d.reconstruct_from_images
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Capture_3d.dataset_info
+      ~Capture_3d.state
+   
+   

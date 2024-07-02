@@ -1,0 +1,7 @@
+﻿substance\_sampler.MeshExportFormat
+===================================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: MeshExportFormat
+

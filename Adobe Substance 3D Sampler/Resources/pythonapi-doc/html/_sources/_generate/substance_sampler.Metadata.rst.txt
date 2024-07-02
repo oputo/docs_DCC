@@ -1,0 +1,33 @@
+﻿substance\_sampler.Metadata
+===========================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: Metadata
+   :members:
+
+   .. automethod:: __init__
+
+
+   .. rubric:: Methods
+
+   .. autosummary::
+
+      ~Metadata.__init__
+
+
+
+
+
+   .. rubric:: Attributes
+
+   .. autosummary::
+
+      ~Metadata.author
+      ~Metadata.category
+      ~Metadata.custom_metadata
+      ~Metadata.description
+      ~Metadata.physical_size
+      ~Metadata.name
+      ~Metadata.tags
+

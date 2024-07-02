@@ -1,0 +1,29 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2010-2020 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+Group layer
+===========
+
+:class:`~substance_painter.layerstack.GroupLayerNode` is a type of layer that can contain other layers. It is used to group layers together to organize the layerstack.
+
+.. literalinclude:: ../snippets/group.py
+   :language: python
+   :caption: Example
+
+.. autofunction:: substance_painter.layerstack.insert_group
+
+.. autoclass:: substance_painter.layerstack.GroupLayerNode
+   :members:
+   :member-order: bysource
+   :show-inheritance:

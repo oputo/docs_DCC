@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- thumbnails.qdoc -->
+  <title>Resource thumbnails | AlgWidgets</title>
+  <link rel="stylesheet" type="text/css" href="style/basic.css" />
+  <script type="text/javascript" src="scripts/scrolling.js"></script>
+  <script type="text/javascript" src="scripts/dropdown.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+ <div class="container">
+   <div class="navbar-header clearfix">
+     <a href="../javascript-doc/index.html">Substance 3D Painter Script</a>
+     <nav class="navbar-menu clearfix" role="navigation">
+       <ul id="mainmenu" class="menu">
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown')" class="dropbtn">Modules</button>
+           <div id="dropDown" class="dropdown-content">
+             <a href="algwidgets-qmlmodule.html">AlgWidgets</a>
+             <a href="qmlmodules.html">Qt QML modules</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown2')" class="dropbtn">Tutorials</button>
+           <div id="dropDown2" class="dropdown-content">
+             <a href="thumbnails.html">Thumbnails</a>
+           </div>
+         </li>
+         <li class="dropdown">
+           <button onclick="showDropDown('dropDown3')" class="dropbtn">Changelogs</button>
+           <div id="dropDown3" class="dropdown-content">
+             <a href="changelog-v-2-0.html">v2.0</a>
+           </div>
+         </li>
+       </ul>
+     </nav>
+   </div>
+ </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#overview">Overview</a></li>
+<li class="level1"><a href="#drag-and-drop">Drag and drop</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Resource thumbnails</h1>
+<span class="subtitle"></span>
+<!-- $$$Thumbnails-description -->
+<div class="descr"> <a name="details"></a>
+<a name="overview"></a>
+<h2 id="overview">Overview</h2>
+<p>It is possible to display resource thumbnails in a custom Substance 3D Painter plugin like the <a href="qml-algwidgets-algresourcewidget.html" translate="no">AlgResourceWidget</a> do when a valid url is set. These thumbnails, originally displayed in the Substance 3D Painter interface like the shelf, can be retrieved with a special url when using an <a href="http://doc.qt.io/qt-5/qml-qtquick-image.html" translate="no">Image</a> QML type.</p>
+<p>The url must begin by &quot;image://resources/&quot; in order to ask the software for the thumbnail. Then, adding the url of a resource will allow an <a href="http://doc.qt.io/qt-5/qml-qtquick-image.html" translate="no">Image</a> component to receive the right icon to display.</p>
+<p>For example:</p>
+<pre class="qml" translate="no"><span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-image.html" translate="no">Image</a></span> {
+  property <span class="type"><a href="http://doc.qt.io/qt-5/qml-string.html" translate="no">string</a></span> <span class="name">url</span>: <span class="string">&quot;&quot;</span>
+  <span class="name">source</span>: <span class="string">&quot;image://resources/&quot;</span> <span class="operator">+</span> <span class="name">url</span>
+}</pre>
+<p>This example will display an icon if the <i translate="no">url</i> property is set to a valid resource url.</p>
+<a name="drag-and-drop"></a>
+<h2 id="drag-and-drop">Drag and drop</h2>
+<p>It is also possible to perform a simple drag and drop of your resource from the shelf to the <a href="http://doc.qt.io/qt-5/qml-qtquick-image.html" translate="no">Image</a> component. There is no need to know the resource url since the drop event contains this information.</p>
+<p>Here is a simple example:</p>
+<pre class="qml" translate="no"><span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-image.html" translate="no">Image</a></span> {
+  property <span class="type"><a href="http://doc.qt.io/qt-5/qml-string.html" translate="no">string</a></span> <span class="name">url</span>: <span class="string">&quot;&quot;</span>
+  <span class="name">source</span>: <span class="string">&quot;image://resources/&quot;</span> <span class="operator">+</span> <span class="name">url</span>
+  <span class="comment">// You can require a specific size for the</span>
+  <span class="comment">// thumbnail by using sourceSize property</span>
+  <span class="name">sourceSize</span>.width: <span class="number">512</span>
+  <span class="name">sourceSize</span>.height: <span class="number">512</span>
+
+  <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-droparea.html" translate="no">DropArea</a></span> {
+    <span class="name">anchors</span>.fill: <span class="name">parent</span>
+    <span class="name">onDropped</span>: {
+      <span class="keyword">if</span> (<span class="name">drop</span>.<span class="name">hasUrls</span>) {
+        <span class="name">parent</span>.<span class="name">url</span> <span class="operator">=</span> <span class="name">drop</span>.<span class="name">urls</span>[<span class="number">0</span>]
+        <span class="name">drop</span>.<span class="name">accept</span>()
+      }
+    }
+  }
+}</pre>
+</div>
+<!-- @@@Thumbnails -->
+</body>
+</html>

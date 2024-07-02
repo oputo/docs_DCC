@@ -1,0 +1,6 @@
+﻿substance\_sampler.AssetType
+============================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: AssetType

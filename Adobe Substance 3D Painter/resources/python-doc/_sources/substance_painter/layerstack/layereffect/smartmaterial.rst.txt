@@ -1,0 +1,30 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2010-2020 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+Smart material
+==============
+
+Smart Materials are presets of layers. They can be used to save and re-use complex setup of layers across projects that adapt to the 3D model.
+
+.. seealso::
+   `Smart Material documentation`_.
+
+.. _Smart Material documentation:
+   https://helpx.adobe.com/substance-3d-painter/features/smart-materials-and-masks.html
+
+.. literalinclude:: ../snippets/smartmaterial.py
+   :language: python
+   :caption: Example
+
+.. autofunction:: substance_painter.layerstack.insert_smart_material

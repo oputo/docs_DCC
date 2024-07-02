@@ -1,0 +1,17 @@
+﻿substance\_sampler.DatasetInfo
+==============================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: DatasetInfo
+   :members:
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DatasetInfo.cameras
+      ~DatasetInfo.image_paths
+      ~DatasetInfo.mask_paths
+   
+   

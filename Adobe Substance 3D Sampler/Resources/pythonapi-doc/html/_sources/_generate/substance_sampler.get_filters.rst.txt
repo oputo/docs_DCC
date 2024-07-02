@@ -1,0 +1,6 @@
+﻿substance\_sampler.get\_filters
+===============================
+
+.. currentmodule:: substance_sampler
+
+.. autofunction:: get_filters

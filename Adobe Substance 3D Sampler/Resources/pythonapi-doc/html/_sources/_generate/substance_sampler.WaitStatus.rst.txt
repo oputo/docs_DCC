@@ -1,0 +1,6 @@
+﻿substance\_sampler.WaitStatus
+=============================
+
+.. currentmodule:: substance_sampler
+
+.. autoclass:: WaitStatus

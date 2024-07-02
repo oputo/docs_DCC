@@ -1,0 +1,73 @@
+..
+   ADOBE CONFIDENTIAL
+   ___________________
+   Copyright 2010-2020 Adobe
+   All Rights Reserved.
+   NOTICE:  All information contained herein is, and remains
+   the property of Adobe and its suppliers, if any. The intellectual
+   and technical concepts contained herein are proprietary to Adobe
+   and its suppliers and are protected by all applicable intellectual
+   property laws, including trade secret and copyright laws.
+   Dissemination of this information or reproduction of this material
+   is strictly forbidden unless prior written permission is obtained
+   from Adobe.
+
+export module
+=============
+
+.. automodule:: substance_painter.export
+   :members:
+   :exclude-members: list_project_textures, TextureExportResult,
+      export_project_textures, get_default_export_path,
+      scene_is_triangulated, scene_has_tessellation,
+      MeshExportOption, MeshExportResult, export_mesh,
+      PredefinedExportPreset, ResourceExportPreset,
+      list_predefined_export_presets, list_resource_export_presets
+
+Export Textures
+---------------
+
+.. autofunction:: substance_painter.export.list_project_textures
+.. autoclass:: substance_painter.export.TextureExportResult
+.. autofunction:: substance_painter.export.export_project_textures
+.. autofunction:: substance_painter.export.get_default_export_path
+.. autoclass:: substance_painter.export.PredefinedExportPreset
+    :members:
+.. autofunction:: substance_painter.export.list_predefined_export_presets
+.. autoclass:: substance_painter.export.ResourceExportPreset
+    :members:
+.. autofunction:: substance_painter.export.list_resource_export_presets
+
+Full json_config dict possibilities
+-----------------------------------
+
+.. literalinclude:: json_config.jsonc
+   :language: javascript
+
+
+Events
+------
+
+Exporting textures, whether initiated through the Python API or in the UI,
+can trigger the following events.
+See :mod:`substance_painter.event` for more details.
+
+.. autoclass:: substance_painter.event.ExportTexturesAboutToStart
+   :noindex:
+   :members:
+
+.. autoclass:: substance_painter.event.ExportTexturesEnded
+   :noindex:
+   :members:
+
+Export Mesh
+-----------
+
+.. autofunction:: substance_painter.export.scene_is_triangulated
+.. autofunction:: substance_painter.export.scene_has_tessellation
+.. autoclass:: substance_painter.export.MeshExportOption
+    :members:
+.. autoclass:: substance_painter.export.MeshExportResult
+    :members:
+.. autofunction:: substance_painter.export.export_mesh
+
